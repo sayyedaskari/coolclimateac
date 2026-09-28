@@ -72,18 +72,36 @@ artwork: save the file in `assets/brands/` and swap the
 `<span class="brand-wordmark">` for an `<img>` like the others. The logo strip
 is duplicated twice in the HTML so it can scroll continuously; edit both copies.
 
-## 6. Photos
+## 6. Photos and credits
 
-The photos are AI-generated placeholders without people. Replace them with real
-photos of your installations whenever you can; keep the file names and shapes:
+Most photos are free stock from Unsplash, used under the Unsplash License
+(free for commercial use, no attribution required, but credit is good manners).
+Two images (the cassette AC tile and the deep-cleaning photo) are AI-generated
+placeholders because no suitable stock photo existed; replace them with your own
+photos when you can.
 
-| Files | Shape | Used in |
+| File | Used in | Photographer (Unsplash) |
 |---|---|---|
-| `hero-split-*` | portrait 4:5 | hero, tall tile |
-| `type-*-480/800` | square | hero small tiles, services photo, AC types |
-| `type-cassette-1200`, `type-ductable-1200` | square | the two wide AC type tiles |
-| `deep-cleaning-*` | portrait | services photo for Deep Cleaning |
-| `og-image.jpg` | 1200 x 630 | link previews on WhatsApp, Facebook, etc. |
+| `hero-room-*` | hero, tall tile | [@___atmos](https://unsplash.com/@___atmos) |
+| `hero-bedroom-*` | hero, small tile | [@mitchel3uo](https://unsplash.com/@mitchel3uo) |
+| `hero-units-*` | hero, small tile | [@kienday](https://unsplash.com/@kienday) |
+| `svc-sales-800` | services photo: AC Sales | [@mikeberyl](https://unsplash.com/@mikeberyl) |
+| `svc-install-800` | services photo: Installation | [@zachmmalin](https://unsplash.com/@zachmmalin) |
+| `svc-repair-800` | services photo: Repair | [@jonathecreator](https://unsplash.com/@jonathecreator) |
+| `svc-amc-800` | services photo: Maintenance and AMC | [@87gi](https://unsplash.com/@87gi) |
+| `svc-hvac-800` | services photo: Commercial HVAC | [@center999](https://unsplash.com/@center999) |
+| `type-split-*` | AC types: Split | [@flaken](https://unsplash.com/@flaken) |
+| `type-window-*` | AC types: Window | [@charamelon](https://unsplash.com/@charamelon) |
+| `type-ductable-*` | AC types: Ductable | [@mitchel3uo](https://unsplash.com/@mitchel3uo) |
+| `type-vrf-*` | AC types: VRV / VRF | [@kettenreaktion](https://unsplash.com/@kettenreaktion) |
+| `type-hvac-*` | AC types: Commercial HVAC | [@sigmund](https://unsplash.com/@sigmund) |
+| `type-cassette-*` | AC types: Cassette | AI-generated placeholder |
+| `deep-cleaning-900` | services photo: Deep Cleaning | AI-generated placeholder |
+| `og-image.jpg` | link previews (1200 x 630) | composed from the hero photos |
+
+To swap a photo, keep the file name and shape (the hero tall tile is 4:5, the
+services photos are 4:5, the AC type tiles are square except the two wide ones,
+which are about 2:1) and overwrite both the `.jpg` and `.webp`.
 
 ## 7. Optional extras
 
