@@ -6,15 +6,14 @@
 <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 
 <!-- =====================================================================
-     EDIT YOUR BUSINESS DETAILS
-     1) On the <body> tag below: phone, WhatsApp number, email, address.
-        Everything on the page (buttons, links, footer) reads from there.
-     2) In this <head>: the website address, page title and description.
-     Placeholders to search for:  [PHONE NUMBER]  [WHATSAPP NUMBER]  [EMAIL]  [ADDRESS]  [WEBSITE URL]
+     EDIT YOUR DETAILS
+     1) WhatsApp number and messages: the data-* attributes on the <body> tag.
+     2) Website address: replace [WEBSITE URL] here in the <head> (and in
+        robots.txt and sitemap.xml) once you have a domain.
      ===================================================================== -->
 
 <title>AC Sales, Service &amp; Repair in Mumbai | Cool Climate AC Services</title>
-<meta name="description" content="Cool Climate AC Services: AC sales, installation, repair, maintenance, deep cleaning and HVAC solutions across Mumbai. Split, window, cassette, ductable and VRV/VRF systems, all major brands. WhatsApp us for a quote.">
+<meta name="description" content="Cool Climate AC Services: AC sales, installation, repair, AMC, deep cleaning and HVAC solutions across Mumbai. Split, window, cassette, ductable and VRV/VRF systems, all major brands. Book on WhatsApp.">
 <link rel="canonical" href="[WEBSITE URL]/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#1a6fb3">
@@ -25,7 +24,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cool Climate AC Services">
 <meta property="og:title" content="AC Sales, Service &amp; HVAC Solutions in Mumbai">
-<meta property="og:description" content="Split, window, cassette, ductable and VRV/VRF systems from all major brands. Sales, installation, repair, maintenance and deep cleaning across Mumbai.">
+<meta property="og:description" content="Split, window, cassette, ductable and VRV/VRF systems from all major brands. Book sales, installation, repair, AMC or deep cleaning on WhatsApp.">
 <meta property="og:url" content="[WEBSITE URL]/">
 <meta property="og:image" content="[WEBSITE URL]/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -34,7 +33,7 @@
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AC Sales, Service &amp; HVAC Solutions in Mumbai">
-<meta name="twitter:description" content="All AC types, all major brands. Sales, installation, repair, maintenance and deep cleaning across Mumbai.">
+<meta name="twitter:description" content="All AC types, all major brands. Book sales, installation, repair, AMC or deep cleaning on WhatsApp.">
 <meta name="twitter:image" content="[WEBSITE URL]/assets/img/og-image.jpg">
 
 <!-- Icons -->
@@ -43,11 +42,9 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 
-<!-- Performance: self-hosted font and the hero photo load first -->
+<!-- Performance: self-hosted font and the first hero photo load early -->
 <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/webp"
-      imagesrcset="assets/img/hero-640.webp 640w, assets/img/hero-960.webp 960w, assets/img/hero-1280.webp 1280w"
-      imagesizes="(min-width: 1024px) 38vw, 100vw">
+<link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/hero-split-560.webp 560w, assets/img/hero-split-840.webp 840w" imagesizes="(min-width: 1024px) 22vw, 55vw">
 <link rel="stylesheet" href="css/styles.css">
 
 <!-- Local business structured data for Google -->
@@ -56,15 +53,14 @@
   "@context": "https://schema.org",
   "@type": "HVACBusiness",
   "name": "Cool Climate AC Services",
-  "description": "AC sales, installation, repair, maintenance, deep cleaning and HVAC solutions for homes and businesses across Mumbai. All AC types and all major brands.",
+  "description": "AC sales, installation, repair, AMC, deep cleaning and HVAC solutions for homes and businesses across Mumbai. All AC types and all major brands.",
   "url": "[WEBSITE URL]/",
   "logo": "[WEBSITE URL]/assets/img/logo.png",
   "image": "[WEBSITE URL]/assets/img/og-image.jpg",
-  "telephone": "[PHONE NUMBER]",
-  "email": "[EMAIL]",
+  "telephone": "+91 80975 70048",
+  "sameAs": ["https://wa.me/918097570048"],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "[ADDRESS]",
     "addressLocality": "Mumbai",
     "addressRegion": "Maharashtra",
     "addressCountry": "IN"
@@ -86,14 +82,11 @@
     "name": "AC services",
     "itemListElement": [
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Sales" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Repair" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Repair" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Maintenance and AMC" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Deep Cleaning" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HVAC Services" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "VRV / VRF Systems" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ductable AC" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cassette AC" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial HVAC, VRV/VRF and Ductable Systems" } }
     ]
   }
 }
@@ -101,20 +94,18 @@
 </head>
 
 <!-- =====================================================================
-     BUSINESS DETAILS: edit the values below.
-       data-phone      shown on the page, e.g. "+91 98765 43210"
-       data-whatsapp   digits with country code, no plus or spaces, e.g. "919876543210"
-       data-email      e.g. "hello@coolclimate.in"
-       data-address    e.g. "Shop 4, Sai Krupa CHS, S.V. Road, Andheri West, Mumbai 400058"
-       data-wa-message the pre-filled WhatsApp text
+     WHATSAPP SETTINGS
+       data-whatsapp          digits with country code, no plus or spaces
+       data-whatsapp-display  how the number is shown on the page
+       data-wa-chat           pre-filled text for "Chat on WhatsApp"
+       data-wa-book           first line of the "Book Your Service" template
      ===================================================================== -->
 <body
   data-business="Cool Climate AC Services"
-  data-phone="[PHONE NUMBER]"
-  data-whatsapp="[WHATSAPP NUMBER]"
-  data-email="[EMAIL]"
-  data-address="[ADDRESS]"
-  data-wa-message="Hello, I would like to enquire about AC sales/service. Please share more details.">
+  data-whatsapp="918097570048"
+  data-whatsapp-display="+91 80975 70048"
+  data-wa-chat="Hello Cool Climate, I would like to enquire about AC sales/service. Please share more details."
+  data-wa-book="Hello Cool Climate, I would like to book an AC service.">
 
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="header-sentinel" aria-hidden="true"></div>
@@ -135,14 +126,14 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-mobile-cta">
-        <a class="btn btn-outline" href="tel:[PHONE NUMBER]" data-tel><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg> Call us</a>
-        <a class="btn btn-wa" href="https://wa.me/[WHATSAPP NUMBER]?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> WhatsApp</a>
+        <a class="btn btn-ghost" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book">Book a service</a>
+        <a class="btn btn-wa" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Chat</a>
       </div>
     </nav>
 
     <div class="header-actions">
-      <a class="header-phone" href="tel:[PHONE NUMBER]" data-tel><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg> <span data-bind="phone">[PHONE NUMBER]</span></a>
-      <a class="btn btn-wa btn-sm" href="https://wa.me/[WHATSAPP NUMBER]?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> <span class="label">WhatsApp Us</span></a>
+      <a class="header-number" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> <span data-bind="whatsapp-display">+91 80975 70048</span></a>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book" aria-label="Book your service on WhatsApp"><svg class="icon icon-compact" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg><span class="label">Book Your Service</span><svg class="icon icon-nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg class="icon icon-list" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg><svg class="icon icon-x" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
     </div>
   </div>
@@ -154,12 +145,12 @@
   <section class="hero" id="home" aria-labelledby="hero-title">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Multi-brand AC specialists in Mumbai</p>
+        <p class="hero-status"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg> Open every day, 9 am to 9 pm</p>
         <h1 id="hero-title">AC Sales, Service &amp; HVAC Solutions in Mumbai</h1>
-        <p class="lead">Split, window, cassette, ductable and VRV/VRF systems from all major brands. Sales, installation, repair and deep cleaning under one roof.</p>
+        <p class="lead">Split, window, cassette, ductable and VRV/VRF systems from all major brands. Book a visit on WhatsApp in under a minute.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="#contact">Get a Quote <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
-          <a class="btn btn-wa btn-lg" href="https://wa.me/[WHATSAPP NUMBER]?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> WhatsApp Us</a>
+          <a class="btn btn-wa btn-lg" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"/></svg> Book Your Service</a>
+          <a class="btn btn-ghost btn-lg" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Chat on WhatsApp</a>
         </div>
         <ul class="hero-points" aria-label="Highlights">
           <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg> Homes, shops and offices</li>
@@ -167,184 +158,172 @@
           <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg> Fast response across Mumbai</li>
         </ul>
       </div>
-      <div class="hero-media">
-        <picture>
-          <source type="image/webp" srcset="assets/img/hero-640.webp 640w, assets/img/hero-960.webp 960w, assets/img/hero-1280.webp 1280w" sizes="(min-width: 1024px) 38vw, 100vw">
-          <img src="assets/img/hero-960.jpg" srcset="assets/img/hero-640.jpg 640w, assets/img/hero-960.jpg 960w, assets/img/hero-1280.jpg 1280w" sizes="(min-width: 1024px) 38vw, 100vw" width="960" height="1192" alt="Cool Climate technician servicing a wall-mounted split AC in a Mumbai apartment" fetchpriority="high" decoding="async">
-        </picture>
+
+      <div class="hero-mosaic" aria-hidden="true">
+        <figure class="m1">
+          <picture>
+            <source type="image/webp" srcset="assets/img/hero-split-560.webp 560w, assets/img/hero-split-840.webp 840w" sizes="(min-width: 1024px) 22vw, 55vw">
+            <img src="assets/img/hero-split-560.jpg" srcset="assets/img/hero-split-560.jpg 560w, assets/img/hero-split-840.jpg 840w" sizes="(min-width: 1024px) 22vw, 55vw" width="560" height="700" alt="" fetchpriority="high" decoding="async">
+          </picture>
+        </figure>
+        <figure class="m2">
+          <picture>
+            <source type="image/webp" srcset="assets/img/type-cassette-480.webp 480w, assets/img/type-cassette-800.webp 800w" sizes="(min-width: 1024px) 16vw, 40vw">
+            <img src="assets/img/type-cassette-480.jpg" srcset="assets/img/type-cassette-480.jpg 480w, assets/img/type-cassette-800.jpg 800w" sizes="(min-width: 1024px) 16vw, 40vw" width="480" height="480" alt="" decoding="async">
+          </picture>
+        </figure>
+        <figure class="m3">
+          <picture>
+            <source type="image/webp" srcset="assets/img/type-vrf-480.webp 480w, assets/img/type-vrf-800.webp 800w" sizes="(min-width: 1024px) 16vw, 40vw">
+            <img src="assets/img/type-vrf-480.jpg" srcset="assets/img/type-vrf-480.jpg 480w, assets/img/type-vrf-800.jpg 800w" sizes="(min-width: 1024px) 16vw, 40vw" width="480" height="480" alt="" decoding="async">
+          </picture>
+        </figure>
       </div>
     </div>
   </section>
 
   <!-- ================= SERVICES ================= -->
   <section class="section services" id="services" aria-labelledby="services-title">
-    <div class="wrap services-layout">
-      <div class="section-intro sticky reveal">
-        <p class="eyebrow">Our services</p>
-        <h2 id="services-title">Everything your AC needs, from purchase to deep clean</h2>
-        <p>One call covers a new AC, installation, breakdown repair, annual maintenance and commercial HVAC work. Genuine parts, trained technicians and a clear price before we start.</p>
-        <a class="btn btn-outline" href="#contact">Get a quote <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 id="services-title">Sales, installation, repair, AMC and deep cleaning. One team, one number.</h2>
+        <p>Tap any service to open WhatsApp with the booking template already filled in.</p>
       </div>
 
-      <div class="service-grid reveal-stagger">
-        <article class="service-card featured">
-          <div class="featured-media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/deep-cleaning-800.webp 800w, assets/img/deep-cleaning-1280.webp 1280w" sizes="(min-width: 1024px) 330px, (min-width: 640px) 45vw, 100vw">
-              <img src="assets/img/deep-cleaning-800.jpg" srcset="assets/img/deep-cleaning-800.jpg 800w, assets/img/deep-cleaning-1280.jpg 1280w" sizes="(min-width: 1024px) 330px, (min-width: 640px) 45vw, 100vw" width="800" height="447" alt="Technician deep cleaning a split AC indoor unit with a jet wash and protective cover" loading="lazy" decoding="async">
-            </picture>
-          </div>
-          <div class="featured-body">
-            <h3>AC Deep Cleaning</h3>
-            <p>Foam and jet-wash cleaning of the coils, blower and filters, with a cover to keep your wall dry. Removes dust, mould and odour and brings cooling back to full strength.</p>
-            <ul class="tag-row" aria-label="Deep cleaning covers">
-              <li>Split and window</li>
-              <li>Cassette and ductable</li>
-              <li>Odour removal</li>
-              <li>Pre-summer service</li>
-            </ul>
-          </div>
-        </article>
+      <div class="services-layout">
+        <ul class="service-list reveal-stagger">
+          <li class="service-row" data-img="split">
+            <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Sales">
+              <h3>AC Sales</h3>
+              <p>New split, window, cassette and ductable ACs from all major brands, with honest advice on tonnage and star rating for your room.</p>
+              <span class="row-arrow"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+            </a>
+          </li>
+          <li class="service-row" data-img="window">
+            <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Installation">
+              <h3>Installation</h3>
+              <p>Neat copper piping, proper drainage, vacuuming and secure outdoor mounting, so the unit runs efficiently for years.</p>
+              <span class="row-arrow"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+            </a>
+          </li>
+          <li class="service-row" data-img="cassette">
+            <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Repair">
+              <h3>Repair</h3>
+              <p>Not cooling, water dripping, noise, gas leaks, PCB or compressor faults. We diagnose on the first visit and quote before we start.</p>
+              <span class="row-arrow"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+            </a>
+          </li>
+          <li class="service-row" data-img="ductable">
+            <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Maintenance / AMC">
+              <h3>Maintenance and AMC</h3>
+              <p>Annual maintenance contracts and seasonal servicing for homes, shops and offices. Fewer breakdowns, lower electricity bills.</p>
+              <span class="row-arrow"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+            </a>
+          </li>
+          <li class="service-row" data-img="cleaning">
+            <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Deep Cleaning">
+              <h3>Deep Cleaning</h3>
+              <p>Foam and jet-wash cleaning of coils, blower and filters, with a cover to keep your wall dry. Removes dust, mould and odour.</p>
+              <span class="row-arrow"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+            </a>
+          </li>
+          <li class="service-row" data-img="hvac">
+            <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:Commercial HVAC">
+              <h3>Commercial HVAC</h3>
+              <p>Design, supply, installation and upkeep of HVAC, VRV/VRF and ductable systems for offices, retail, clinics and industrial units.</p>
+              <span class="row-arrow"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+            </a>
+          </li>
+        </ul>
 
-        <article class="service-card">
-          <span class="service-icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,96a64,64,0,0,1-94.94,56L73,217A24,24,0,0,1,39,183L104,126.94a64,64,0,0,1,80-90.29L144,80l5.66,26.34L176,112l43.35-40A63.8,63.8,0,0,1,224,96Z" opacity="0.2"/><path d="M226.76,69a8,8,0,0,0-12.84-2.88l-40.3,37.19-17.23-3.7-3.7-17.23,37.19-40.3A8,8,0,0,0,187,29.24,72,72,0,0,0,88,96,72.34,72.34,0,0,0,94,124.94L33.79,177c-.15.12-.29.26-.43.39a32,32,0,0,0,45.26,45.26c.13-.13.27-.28.39-.42L131.06,162A72,72,0,0,0,232,96,71.56,71.56,0,0,0,226.76,69ZM160,152a56.14,56.14,0,0,1-27.07-7,8,8,0,0,0-9.92,1.77L67.11,211.51a16,16,0,0,1-22.62-22.62L109.18,133a8,8,0,0,0,1.77-9.93,56,56,0,0,1,58.36-82.31l-31.2,33.81a8,8,0,0,0-1.94,7.1L141.83,108a8,8,0,0,0,6.14,6.14l26.35,5.66a8,8,0,0,0,7.1-1.94l33.81-31.2A56.06,56.06,0,0,1,160,152Z"/></svg></span>
-          <h3>AC Repair</h3>
-          <p>Not cooling, water dripping, noise, gas leaks, PCB or compressor faults. We diagnose on the first visit and quote before we start.</p>
-        </article>
-
-        <article class="service-card">
-          <span class="service-icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,96v16a32,32,0,0,1-64,0V96H96v16a32,32,0,0,1-64,0V96L46.34,45.8A8,8,0,0,1,54,40H202a8,8,0,0,1,7.69,5.8Z" opacity="0.2"/><path d="M231.69,93.81,217.35,43.6A16.07,16.07,0,0,0,202,32H54A16.07,16.07,0,0,0,38.65,43.6L24.31,93.81A7.94,7.94,0,0,0,24,96v16a40,40,0,0,0,16,32v72a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V144a40,40,0,0,0,16-32V96A7.94,7.94,0,0,0,231.69,93.81ZM54,48H202l11.42,40H42.61Zm98,56v8a24,24,0,0,1-48,0v-8ZM51.06,132.2A24,24,0,0,1,40,112v-8H88v8a24,24,0,0,1-35.12,21.26A7.88,7.88,0,0,0,51.06,132.2ZM200,208H56V151.2a40.57,40.57,0,0,0,8,.8,40,40,0,0,0,32-16,40,40,0,0,0,64,0,40,40,0,0,0,32,16,40.57,40.57,0,0,0,8-.8Zm16-96a24,24,0,0,1-11.07,20.2,8.08,8.08,0,0,0-1.8,1.05A24,24,0,0,1,168,112v-8h48Z"/></svg></span>
-          <h3>AC Sales</h3>
-          <p>New split, window, cassette and ductable ACs from all major brands, with honest advice on tonnage and star rating for your room.</p>
-        </article>
-
-        <article class="service-card">
-          <span class="service-icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,120v72a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V120Z" opacity="0.2"/><path d="M224,64H176V56a24,24,0,0,0-24-24H104A24,24,0,0,0,80,56v8H32A16,16,0,0,0,16,80V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V80A16,16,0,0,0,224,64ZM96,56a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM32,80H224v32H192v-8a8,8,0,0,0-16,0v8H80v-8a8,8,0,0,0-16,0v8H32ZM224,192H32V128H64v8a8,8,0,0,0,16,0v-8h96v8a8,8,0,0,0,16,0v-8h32v64Z"/></svg></span>
-          <h3>AC Installation</h3>
-          <p>Neat copper piping, proper drainage, vacuuming and secure outdoor mounting, so the unit runs efficiently for years.</p>
-        </article>
-
-        <article class="service-card">
-          <span class="service-icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z" opacity="0.2"/><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"/></svg></span>
-          <h3>AC Maintenance</h3>
-          <p>Annual maintenance contracts and seasonal servicing for homes, shops and offices. Fewer breakdowns and lower electricity bills.</p>
-        </article>
-
-        <article class="service-card">
-          <span class="service-icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M136,32V216H40V85.35a8,8,0,0,1,3.56-6.66l80-53.33A8,8,0,0,1,136,32Z" opacity="0.2"/><path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Z"/></svg></span>
-          <h3>HVAC Services</h3>
-          <p>Design, supply, installation and upkeep of HVAC systems for offices, retail, clinics and industrial units.</p>
-        </article>
-
-        <article class="service-card">
-          <span class="service-icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M64,112v32a8,8,0,0,1-8,8H24a8,8,0,0,1-8-8V112a8,8,0,0,1,8-8H56A8,8,0,0,1,64,112ZM208,40H160a8,8,0,0,0-8,8V96a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V48A8,8,0,0,0,208,40Zm0,112H160a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V160A8,8,0,0,0,208,152Z" opacity="0.2"/><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></svg></span>
-          <h3>VRV / VRF</h3>
-          <p>Installation, servicing and fault-finding for multi-zone VRV and VRF systems in commercial buildings and large homes.</p>
-        </article>
-
-        <article class="service-card">
-          <span class="service-icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M120,96a24,24,0,1,1,24-24A24,24,0,0,1,120,96Zm88-16a24,24,0,1,0,24,24A24,24,0,0,0,208,80Zm-56,80a24,24,0,1,0,24,24A24,24,0,0,0,152,160Z" opacity="0.2"/><path d="M184,184a32,32,0,0,1-32,32c-13.7,0-26.95-8.93-31.5-21.22a8,8,0,0,1,15-5.56C137.74,195.27,145,200,152,200a16,16,0,0,0,0-32H40a8,8,0,0,1,0-16H152A32,32,0,0,1,184,184Zm-64-80a32,32,0,0,0,0-64c-13.7,0-26.95,8.93-31.5,21.22a8,8,0,0,0,15,5.56C105.74,60.73,113,56,120,56a16,16,0,0,1,0,32H24a8,8,0,0,0,0,16Zm88-32c-13.7,0-26.95,8.93-31.5,21.22a8,8,0,0,0,15,5.56C193.74,92.73,201,88,208,88a16,16,0,0,1,0,32H32a8,8,0,0,0,0,16H208a32,32,0,0,0,0-64Z"/></svg></span>
-          <h3>Ductable AC</h3>
-          <p>Concealed ductable units for showrooms, halls and offices, including ducting, grilles and periodic servicing.</p>
-        </article>
-
-        <article class="service-card">
-          <span class="service-icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M112,56v48a8,8,0,0,1-8,8H56a8,8,0,0,1-8-8V56a8,8,0,0,1,8-8h48A8,8,0,0,1,112,56Zm88-8H152a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V56A8,8,0,0,0,200,48Zm-96,96H56a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V152A8,8,0,0,0,104,144Zm96,0H152a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V152A8,8,0,0,0,200,144Z" opacity="0.2"/><path d="M200,136H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48ZM104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Z"/></svg></span>
-          <h3>Cassette AC</h3>
-          <p>Ceiling cassette supply, installation and servicing for spaces that need even, quiet cooling from above.</p>
-        </article>
+        <div class="service-visual reveal" aria-hidden="true">
+          <picture><source type="image/webp" srcset="assets/img/type-split-800.webp"><img data-for="split" src="assets/img/type-split-800.jpg" width="800" height="800" alt="" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="assets/img/type-window-800.webp"><img data-for="window" src="assets/img/type-window-800.jpg" width="800" height="800" alt="" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="assets/img/type-cassette-800.webp"><img data-for="cassette" src="assets/img/type-cassette-800.jpg" width="800" height="800" alt="" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="assets/img/type-ductable-800.webp"><img data-for="ductable" src="assets/img/type-ductable-800.jpg" width="800" height="800" alt="" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="assets/img/deep-cleaning-900.webp"><img data-for="cleaning" src="assets/img/deep-cleaning-900.jpg" width="900" height="1213" alt="" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="assets/img/type-hvac-800.webp"><img data-for="hvac" src="assets/img/type-hvac-800.jpg" width="800" height="800" alt="" loading="lazy" decoding="async"></picture>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ================= AC TYPES ================= -->
-  <section class="section ac-types" id="ac-types" aria-labelledby="types-title">
+  <section class="section types" id="ac-types" aria-labelledby="types-title">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow">AC types we handle</p>
-        <h2 id="types-title">From a single bedroom split to a full commercial floor</h2>
+        <h2 id="types-title">Every AC type, from a bedroom split to a commercial floor</h2>
         <p>Whatever is on your wall, in your ceiling or on the roof, we sell it, install it and keep it running.</p>
       </div>
 
-      <div class="type-grid reveal-stagger">
-        <article class="type-card">
-          <div class="type-media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/type-split-480.webp 480w, assets/img/type-split-800.webp 800w" sizes="(min-width: 1024px) 380px, (min-width: 560px) 50vw, 78vw">
-              <img src="assets/img/type-split-480.jpg" srcset="assets/img/type-split-480.jpg 480w, assets/img/type-split-800.jpg 800w" sizes="(min-width: 1024px) 380px, (min-width: 560px) 50vw, 78vw" width="480" height="480" alt="White split AC indoor unit mounted on a living room wall" loading="lazy" decoding="async">
-            </picture>
-          </div>
-          <div class="type-body">
-            <h3>Split AC</h3>
-            <p>The everyday choice for bedrooms, living rooms and small offices. Inverter and non-inverter, 0.8 to 2 ton.</p>
-          </div>
-        </article>
-
-        <article class="type-card">
-          <div class="type-media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/type-window-480.webp 480w, assets/img/type-window-800.webp 800w" sizes="(min-width: 1024px) 380px, (min-width: 560px) 50vw, 78vw">
-              <img src="assets/img/type-window-480.jpg" srcset="assets/img/type-window-480.jpg 480w, assets/img/type-window-800.jpg 800w" sizes="(min-width: 1024px) 380px, (min-width: 560px) 50vw, 78vw" width="480" height="480" alt="Window AC unit fitted in a bedroom window" loading="lazy" decoding="async">
-            </picture>
-          </div>
-          <div class="type-body">
-            <h3>Window AC</h3>
-            <p>Compact, budget-friendly cooling for single rooms and rented flats. Quick to install and easy to service.</p>
-          </div>
-        </article>
-
-        <article class="type-card">
-          <div class="type-media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/type-cassette-480.webp 480w, assets/img/type-cassette-800.webp 800w" sizes="(min-width: 1024px) 380px, (min-width: 560px) 50vw, 78vw">
-              <img src="assets/img/type-cassette-480.jpg" srcset="assets/img/type-cassette-480.jpg 480w, assets/img/type-cassette-800.jpg 800w" sizes="(min-width: 1024px) 380px, (min-width: 560px) 50vw, 78vw" width="480" height="480" alt="Four-way ceiling cassette AC in an office false ceiling" loading="lazy" decoding="async">
-            </picture>
-          </div>
-          <div class="type-body">
-            <h3>Cassette AC</h3>
-            <p>Sits flush in the ceiling and throws air in four directions. Ideal for offices, clinics and restaurants.</p>
-          </div>
-        </article>
-
-        <article class="type-card">
-          <div class="type-media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/type-ductable-480.webp 480w, assets/img/type-ductable-800.webp 800w" sizes="(min-width: 1024px) 380px, (min-width: 560px) 50vw, 78vw">
-              <img src="assets/img/type-ductable-480.jpg" srcset="assets/img/type-ductable-480.jpg 480w, assets/img/type-ductable-800.jpg 800w" sizes="(min-width: 1024px) 380px, (min-width: 560px) 50vw, 78vw" width="480" height="480" alt="Linear supply air grilles of a concealed ductable AC in a showroom ceiling" loading="lazy" decoding="async">
-            </picture>
-          </div>
-          <div class="type-body">
-            <h3>Ductable AC</h3>
-            <p>Hidden above the false ceiling with only the grilles visible. Suits showrooms, banquet halls and open offices.</p>
-          </div>
-        </article>
-
-        <article class="type-card">
-          <div class="type-media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/type-vrf-480.webp 480w, assets/img/type-vrf-800.webp 800w" sizes="(min-width: 1024px) 380px, (min-width: 560px) 50vw, 78vw">
-              <img src="assets/img/type-vrf-480.jpg" srcset="assets/img/type-vrf-480.jpg 480w, assets/img/type-vrf-800.jpg 800w" sizes="(min-width: 1024px) 380px, (min-width: 560px) 50vw, 78vw" width="480" height="480" alt="Row of VRF outdoor units on a commercial rooftop in Mumbai" loading="lazy" decoding="async">
-            </picture>
-          </div>
-          <div class="type-body">
-            <h3>VRV / VRF Systems</h3>
-            <p>One outdoor unit serving many indoor zones, each with its own control. For commercial buildings and large homes.</p>
-          </div>
-        </article>
-
-        <article class="type-card">
-          <div class="type-media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/type-hvac-480.webp 480w, assets/img/type-hvac-800.webp 800w" sizes="(min-width: 1024px) 380px, (min-width: 560px) 50vw, 78vw">
-              <img src="assets/img/type-hvac-480.jpg" srcset="assets/img/type-hvac-480.jpg 480w, assets/img/type-hvac-800.jpg 800w" sizes="(min-width: 1024px) 380px, (min-width: 560px) 50vw, 78vw" width="480" height="480" alt="Commercial HVAC plant room with air handling unit and insulated pipework" loading="lazy" decoding="async">
-            </picture>
-          </div>
-          <div class="type-body">
-            <h3>Commercial HVAC</h3>
-            <p>Air handling units, chillers, ducting and controls for offices, retail, hospitals and industrial spaces.</p>
-          </div>
-        </article>
-      </div>
+      <ul class="bento reveal-stagger">
+        <li class="tile">
+          <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="type:Split AC">
+            <figure>
+              <picture>
+                <source type="image/webp" srcset="assets/img/type-split-480.webp 480w, assets/img/type-split-800.webp 800w" sizes="(min-width: 1024px) 24vw, (min-width: 560px) 50vw, 100vw">
+                <img src="assets/img/type-split-480.jpg" srcset="assets/img/type-split-480.jpg 480w, assets/img/type-split-800.jpg 800w" sizes="(min-width: 1024px) 24vw, (min-width: 560px) 50vw, 100vw" width="480" height="480" alt="White split AC indoor unit on a living room wall" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="tile-cap"><div><h3>Split AC</h3><p>Bedrooms, living rooms, small offices</p></div><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></div>
+          </a>
+        </li>
+        <li class="tile">
+          <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="type:Window AC">
+            <figure>
+              <picture>
+                <source type="image/webp" srcset="assets/img/type-window-480.webp 480w, assets/img/type-window-800.webp 800w" sizes="(min-width: 1024px) 24vw, (min-width: 560px) 50vw, 100vw">
+                <img src="assets/img/type-window-480.jpg" srcset="assets/img/type-window-480.jpg 480w, assets/img/type-window-800.jpg 800w" sizes="(min-width: 1024px) 24vw, (min-width: 560px) 50vw, 100vw" width="480" height="480" alt="Window AC unit fitted in a bedroom window" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="tile-cap"><div><h3>Window AC</h3><p>Single rooms and rented flats</p></div><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></div>
+          </a>
+        </li>
+        <li class="tile wide">
+          <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="type:Cassette AC">
+            <figure>
+              <picture>
+                <source type="image/webp" srcset="assets/img/type-cassette-800.webp 800w, assets/img/type-cassette-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw">
+                <img src="assets/img/type-cassette-800.jpg" srcset="assets/img/type-cassette-800.jpg 800w, assets/img/type-cassette-1200.jpg 1200w" sizes="(min-width: 1024px) 50vw, 100vw" width="800" height="800" alt="Four-way ceiling cassette AC in an office false ceiling" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="tile-cap"><div><h3>Cassette AC</h3><p>Flush in the ceiling, four-way airflow. Offices, clinics, restaurants</p></div><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></div>
+          </a>
+        </li>
+        <li class="tile wide">
+          <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="type:Ductable AC">
+            <figure>
+              <picture>
+                <source type="image/webp" srcset="assets/img/type-ductable-800.webp 800w, assets/img/type-ductable-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw">
+                <img src="assets/img/type-ductable-800.jpg" srcset="assets/img/type-ductable-800.jpg 800w, assets/img/type-ductable-1200.jpg 1200w" sizes="(min-width: 1024px) 50vw, 100vw" width="800" height="800" alt="Linear supply air grilles of a concealed ductable AC" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="tile-cap"><div><h3>Ductable AC</h3><p>Hidden above the false ceiling. Showrooms, halls, open offices</p></div><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></div>
+          </a>
+        </li>
+        <li class="tile">
+          <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="type:VRV / VRF">
+            <figure>
+              <picture>
+                <source type="image/webp" srcset="assets/img/type-vrf-480.webp 480w, assets/img/type-vrf-800.webp 800w" sizes="(min-width: 1024px) 24vw, (min-width: 560px) 50vw, 100vw">
+                <img src="assets/img/type-vrf-480.jpg" srcset="assets/img/type-vrf-480.jpg 480w, assets/img/type-vrf-800.jpg 800w" sizes="(min-width: 1024px) 24vw, (min-width: 560px) 50vw, 100vw" width="480" height="480" alt="Row of VRF outdoor units on a commercial rooftop in Mumbai" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="tile-cap"><div><h3>VRV / VRF</h3><p>Many zones, one outdoor unit</p></div><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></div>
+          </a>
+        </li>
+        <li class="tile">
+          <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="type:Commercial HVAC">
+            <figure>
+              <picture>
+                <source type="image/webp" srcset="assets/img/type-hvac-480.webp 480w, assets/img/type-hvac-800.webp 800w" sizes="(min-width: 1024px) 24vw, (min-width: 560px) 50vw, 100vw">
+                <img src="assets/img/type-hvac-480.jpg" srcset="assets/img/type-hvac-480.jpg 480w, assets/img/type-hvac-800.jpg 800w" sizes="(min-width: 1024px) 24vw, (min-width: 560px) 50vw, 100vw" width="480" height="480" alt="Commercial HVAC plant room with air handling unit and pipework" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="tile-cap"><div><h3>Commercial HVAC</h3><p>AHUs, chillers, ducting, controls</p></div><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></div>
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -352,161 +331,129 @@
   <section class="section brands" id="brands" aria-labelledby="brands-title">
     <div class="wrap">
       <div class="section-head center reveal">
-        <p class="eyebrow">Brands</p>
         <h2 id="brands-title">We Service All Major AC Brands</h2>
-        <p>Multi-brand expertise means you don't need a different technician for every unit in the building.</p>
+        <p>One team for every unit you own, whichever name is on the sticker.</p>
       </div>
-
-      <!-- To replace a logo: drop the file in assets/brands/ and update the <img> below.
-           Carrier, O General and Lloyd are typeset until official artwork is added. -->
-      <ul class="brand-grid reveal-stagger" aria-label="AC brands we service">
-        <li><img src="assets/brands/daikin.svg" width="186" height="40" alt="Daikin" loading="lazy" decoding="async"></li>
-        <li><img src="assets/brands/lg.svg" width="114" height="52" class="tall" alt="LG" loading="lazy" decoding="async"></li>
-        <li><img src="assets/brands/samsung.svg" width="231" height="40" alt="Samsung" loading="lazy" decoding="async"></li>
-        <li><img src="assets/brands/panasonic.svg" width="230" height="40" alt="Panasonic" loading="lazy" decoding="async"></li>
-        <li><img src="assets/brands/voltas.svg" width="218" height="40" alt="Voltas" loading="lazy" decoding="async"></li>
-        <li><img src="assets/brands/bluestar.png" width="200" height="40" alt="Blue Star" loading="lazy" decoding="async"></li>
-        <li><span class="brand-wordmark" style="--brand-color:#1c4fa1">Carrier</span></li>
-        <li><img src="assets/brands/hitachi.svg" width="220" height="40" alt="Hitachi" loading="lazy" decoding="async"></li>
-        <li><span class="brand-wordmark caps" style="--brand-color:#0b3d91">O GENERAL</span></li>
-        <li><span class="brand-wordmark" style="--brand-color:#c8102e">Lloyd</span></li>
-        <li><img src="assets/brands/godrej.svg" width="108" height="52" class="tall" alt="Godrej" loading="lazy" decoding="async"></li>
-        <li><img src="assets/brands/whirlpool.svg" width="120" height="40" alt="Whirlpool" loading="lazy" decoding="async"></li>
+    </div>
+    <!-- To replace a logo: drop the file in assets/brands/ and update the matching <img> in BOTH tracks.
+         Carrier, O General and Lloyd are typeset until official artwork is added. -->
+    <div class="marquee reveal" aria-label="AC brands we service">
+      <ul class="marquee-track">
+        <li class="brand-tile"><img src="assets/brands/daikin.svg" width="186" height="40" alt="Daikin" decoding="async"></li>
+        <li class="brand-tile"><img src="assets/brands/lg.svg" width="114" height="52" class="tall" alt="LG" decoding="async"></li>
+        <li class="brand-tile"><img src="assets/brands/samsung.svg" width="231" height="40" alt="Samsung" decoding="async"></li>
+        <li class="brand-tile"><img src="assets/brands/panasonic.svg" width="230" height="40" alt="Panasonic" decoding="async"></li>
+        <li class="brand-tile"><img src="assets/brands/voltas.svg" width="218" height="40" alt="Voltas" decoding="async"></li>
+        <li class="brand-tile"><img src="assets/brands/bluestar.png" width="200" height="40" alt="Blue Star" decoding="async"></li>
+        <li class="brand-tile"><span class="brand-wordmark" style="--brand-color:#1c4fa1" role="img" aria-label="Carrier">Carrier</span></li>
+        <li class="brand-tile"><img src="assets/brands/hitachi.svg" width="220" height="40" alt="Hitachi" decoding="async"></li>
+        <li class="brand-tile"><span class="brand-wordmark caps" style="--brand-color:#0b3d91" role="img" aria-label="O GENERAL">O GENERAL</span></li>
+        <li class="brand-tile"><span class="brand-wordmark" style="--brand-color:#c8102e" role="img" aria-label="Lloyd">Lloyd</span></li>
+        <li class="brand-tile"><img src="assets/brands/godrej.svg" width="108" height="52" class="tall" alt="Godrej" decoding="async"></li>
+        <li class="brand-tile"><img src="assets/brands/whirlpool.svg" width="120" height="40" alt="Whirlpool" decoding="async"></li>
       </ul>
-
-      <p class="brand-note">Brand names and logos belong to their respective owners and are shown only to indicate the equipment we service. Cool Climate AC Services is an independent, multi-brand service provider and is not an authorised dealer or service centre for any brand unless stated.</p>
+      <ul class="marquee-track" aria-hidden="true">
+        <li class="brand-tile"><img src="assets/brands/daikin.svg" width="186" height="40" alt="Daikin" decoding="async"></li>
+        <li class="brand-tile"><img src="assets/brands/lg.svg" width="114" height="52" class="tall" alt="LG" decoding="async"></li>
+        <li class="brand-tile"><img src="assets/brands/samsung.svg" width="231" height="40" alt="Samsung" decoding="async"></li>
+        <li class="brand-tile"><img src="assets/brands/panasonic.svg" width="230" height="40" alt="Panasonic" decoding="async"></li>
+        <li class="brand-tile"><img src="assets/brands/voltas.svg" width="218" height="40" alt="Voltas" decoding="async"></li>
+        <li class="brand-tile"><img src="assets/brands/bluestar.png" width="200" height="40" alt="Blue Star" decoding="async"></li>
+        <li class="brand-tile"><span class="brand-wordmark" style="--brand-color:#1c4fa1" role="img" aria-label="Carrier">Carrier</span></li>
+        <li class="brand-tile"><img src="assets/brands/hitachi.svg" width="220" height="40" alt="Hitachi" decoding="async"></li>
+        <li class="brand-tile"><span class="brand-wordmark caps" style="--brand-color:#0b3d91" role="img" aria-label="O GENERAL">O GENERAL</span></li>
+        <li class="brand-tile"><span class="brand-wordmark" style="--brand-color:#c8102e" role="img" aria-label="Lloyd">Lloyd</span></li>
+        <li class="brand-tile"><img src="assets/brands/godrej.svg" width="108" height="52" class="tall" alt="Godrej" decoding="async"></li>
+        <li class="brand-tile"><img src="assets/brands/whirlpool.svg" width="120" height="40" alt="Whirlpool" decoding="async"></li>
+      </ul>
     </div>
   </section>
 
   <!-- ================= WHY US ================= -->
-  <section class="section why-us" id="why-us" aria-labelledby="why-title">
-    <div class="wrap why-layout">
-      <div class="why-media reveal">
-        <picture>
-          <source type="image/webp" srcset="assets/img/team-800.webp 800w, assets/img/team-1280.webp 1280w" sizes="(min-width: 1024px) 40vw, 100vw">
-          <img src="assets/img/team-800.jpg" srcset="assets/img/team-800.jpg 800w, assets/img/team-1280.jpg 1280w" sizes="(min-width: 1024px) 40vw, 100vw" width="800" height="447" alt="Two Cool Climate technicians beside their service van on a Mumbai street" loading="lazy" decoding="async">
-        </picture>
+  <section class="section why" id="why-us" aria-labelledby="why-title">
+    <div class="wrap">
+      <div class="why-grid">
+        <div class="why-intro reveal">
+          <h2 id="why-title">Book on WhatsApp. We handle the rest.</h2>
+          <p>No call centre, no forms. You message the same team that turns up at your door, and the same team you can message again next summer.</p>
+          <a class="btn btn-wa" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"/></svg> Book Your Service</a>
+        </div>
+
+        <ol class="steps reveal-stagger" aria-label="How a service visit works">
+          <li><span class="step-dot"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg></span><h3>Message us on WhatsApp</h3><p>Tell us the AC type, brand and what's wrong. A photo of the unit helps.</p></li>
+          <li><span class="step-dot"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg></span><h3>We confirm a time slot</h3><p>Same day where possible, or a slot that suits you, including weekends.</p></li>
+          <li><span class="step-dot"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M226.76,69a8,8,0,0,0-12.84-2.88l-40.3,37.19-17.23-3.7-3.7-17.23,37.19-40.3A8,8,0,0,0,187,29.24,72,72,0,0,0,88,96,72.34,72.34,0,0,0,94,124.94L33.79,177c-.15.12-.29.26-.43.39a32,32,0,0,0,45.26,45.26c.13-.13.27-.28.39-.42L131.06,162A72,72,0,0,0,232,96,71.56,71.56,0,0,0,226.76,69ZM160,152a56.14,56.14,0,0,1-27.07-7,8,8,0,0,0-9.92,1.77L67.11,211.51a16,16,0,0,1-22.62-22.62L109.18,133a8,8,0,0,0,1.77-9.93,56,56,0,0,1,58.36-82.31l-31.2,33.81a8,8,0,0,0-1.94,7.1L141.83,108a8,8,0,0,0,6.14,6.14l26.35,5.66a8,8,0,0,0,7.1-1.94l33.81-31.2A56.06,56.06,0,0,1,160,152Z"/></svg></span><h3>Technician visits and quotes</h3><p>Diagnosis on the spot and a clear estimate before any work starts.</p></li>
+          <li><span class="step-dot"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></svg></span><h3>Job done and tested</h3><p>We test the unit with you and stay one message away if anything needs a follow-up.</p></li>
+        </ol>
       </div>
 
-      <div class="why-copy reveal">
-        <p class="eyebrow">Why choose us</p>
-        <h2 id="why-title">A local AC team you can call again next summer</h2>
-        <p>We're a Mumbai business, and most of our work comes from customers who call us back and recommend us to neighbours.</p>
-        <ul class="benefit-grid">
-          <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M176,96a48,48,0,1,1-48-48A48,48,0,0,1,176,96Z" opacity="0.2"/><path d="M216,96A88,88,0,1,0,72,163.83V240a8,8,0,0,0,11.58,7.16L128,225l44.43,22.21A8.07,8.07,0,0,0,176,248a8,8,0,0,0,8-8V163.83A87.85,87.85,0,0,0,216,96ZM56,96a72,72,0,1,1,72,72A72.08,72.08,0,0,1,56,96ZM168,227.06l-36.43-18.21a8,8,0,0,0-7.16,0L88,227.06V174.37a87.89,87.89,0,0,0,80,0ZM128,152A56,56,0,1,0,72,96,56.06,56.06,0,0,0,128,152Zm0-96A40,40,0,1,1,88,96,40,40,0,0,1,128,56Z"/></svg><div><h3>Experienced technicians</h3><p>Trained on inverter, VRF and ductable systems, not just basic servicing.</p></div></li>
-          <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><div><h3>All major AC brands</h3><p>Daikin to Voltas, LG to Blue Star. One team for every unit you own.</p></div></li>
-          <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,116.69V216H152V152H104v64H40V116.69l82.34-82.35a8,8,0,0,1,11.32,0Z" opacity="0.2"/><path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"/></svg><div><h3>Residential and commercial</h3><p>Flats and bungalows, shops, offices, clinics and small industrial units.</p></div></li>
-          <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,56V208l-32-16-32,16-32-16L96,208,64,192,32,208V56a8,8,0,0,1,8-8H216A8,8,0,0,1,224,56Z" opacity="0.2"/><path d="M72,104a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,104Zm8,40h96a8,8,0,0,0,0-16H80a8,8,0,0,0,0,16ZM232,56V208a8,8,0,0,1-11.58,7.15L192,200.94l-28.42,14.21a8,8,0,0,1-7.16,0L128,200.94,99.58,215.15a8,8,0,0,1-7.16,0L64,200.94,35.58,215.15A8,8,0,0,1,24,208V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Zm-16,0H40V195.06l20.42-10.22a8,8,0,0,1,7.16,0L96,199.06l28.42-14.22a8,8,0,0,1,7.16,0L160,199.06l28.42-14.22a8,8,0,0,1,7.16,0L216,195.06Z"/></svg><div><h3>Transparent pricing</h3><p>You get an estimate before work starts. No surprise charges on the bill.</p></div></li>
-          <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M96,240l16-80L48,136,160,16,144,96l64,24Z" opacity="0.2"/><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><div><h3>Fast response in Mumbai</h3><p>Quick visits across Mumbai, Thane and Navi Mumbai, including weekends.</p></div></li>
-          <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,129.09V232a8,8,0,0,1-3.84-1l-88-48.18a8,8,0,0,1-4.16-7V80.18a8,8,0,0,1,.7-3.25Z" opacity="0.2"/><path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"/></svg><div><h3>Everything under one roof</h3><p>Sales, installation, repair, AMC and deep cleaning from one point of contact.</p></div></li>
-        </ul>
-      </div>
+      <ul class="benefits reveal-stagger" aria-label="Why choose Cool Climate">
+        <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><div><h3>Experienced technicians</h3><p>Trained on inverter, VRF and ductable systems, not just basic servicing.</p></div></li>
+        <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><div><h3>All major AC brands</h3><p>Daikin to Voltas, LG to Blue Star. One team for every unit you own.</p></div></li>
+        <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><div><h3>Residential and commercial</h3><p>Flats and bungalows, shops, offices, clinics and small industrial units.</p></div></li>
+        <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><div><h3>Transparent pricing</h3><p>You get an estimate before work starts. No surprise charges on the bill.</p></div></li>
+        <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><div><h3>Fast response in Mumbai</h3><p>Quick visits across Mumbai, Thane and Navi Mumbai, including weekends.</p></div></li>
+        <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><div><h3>Everything under one roof</h3><p>Sales, installation, repair, AMC and deep cleaning from one point of contact.</p></div></li>
+      </ul>
     </div>
   </section>
 
   <!-- ================= SERVICE AREA ================= -->
   <section class="section area" id="service-area" aria-labelledby="area-title">
-    <div class="wrap">
-      <div class="area-copy reveal">
-        <p class="eyebrow">Service area</p>
+    <div class="wrap area-grid">
+      <div class="area-intro reveal">
         <h2 id="area-title">Serving all of Mumbai and nearby areas</h2>
         <p>From Colaba to Dahisar and Mulund, plus Thane and Navi Mumbai. Not sure if we reach you? Ask on WhatsApp and we'll confirm.</p>
+        <a class="btn btn-ghost" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Ask about your area</a>
       </div>
-      <ul class="area-pills reveal-stagger" aria-label="Areas we serve">
-        <li>Andheri</li><li>Bandra</li><li>Borivali</li><li>Chembur</li><li>Dadar</li><li>Dahisar</li>
-        <li>Ghatkopar</li><li>Goregaon</li><li>Juhu</li><li>Kandivali</li><li>Kurla</li><li>Lower Parel</li>
-        <li>Malad</li><li>Mira Road</li><li>Mulund</li><li>Powai</li><li>Santacruz</li><li>Vile Parle</li>
-        <li>Worli</li><li>Thane</li><li>Navi Mumbai</li><li>Vashi</li>
-        <li class="more">and all of Mumbai</li>
-      </ul>
+      <div class="area-cols reveal-stagger">
+        <div>
+          <h3>Western suburbs</h3>
+          <ul><li>Andheri</li><li>Bandra</li><li>Borivali</li><li>Dahisar</li><li>Goregaon</li><li>Juhu</li><li>Kandivali</li><li>Malad</li><li>Santacruz</li><li>Vile Parle</li></ul>
+        </div>
+        <div>
+          <h3>Central and east</h3>
+          <ul><li>Bhandup</li><li>Chembur</li><li>Ghatkopar</li><li>Kurla</li><li>Mulund</li><li>Powai</li><li>Sion</li><li>Vikhroli</li></ul>
+        </div>
+        <div>
+          <h3>South Mumbai</h3>
+          <ul><li>Colaba</li><li>Dadar</li><li>Lower Parel</li><li>Mahim</li><li>Parel</li><li>Prabhadevi</li><li>Worli</li></ul>
+        </div>
+        <div>
+          <h3>Beyond the city</h3>
+          <ul><li>Thane</li><li>Navi Mumbai</li><li>Vashi</li><li>Mira Road</li><li>Bhayandar</li></ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ================= CONTACT ================= -->
   <section class="section contact" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
-      <div class="contact-panel reveal">
-        <div class="contact-info">
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Need AC Service or a New AC? Contact Us Today.</h2>
-          <p>Call, WhatsApp or send the form. We reply quickly during working hours.</p>
-
-          <ul class="contact-list">
-            <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg><div><span class="label">Phone</span><a href="tel:[PHONE NUMBER]" data-tel data-bind="phone">[PHONE NUMBER]</a></div></li>
-            <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg><div><span class="label">WhatsApp</span><a href="https://wa.me/[WHATSAPP NUMBER]?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa data-bind="whatsapp">[WHATSAPP NUMBER]</a></div></li>
-            <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg><div><span class="label">Email</span><a href="mailto:[EMAIL]" data-mail data-bind="email">[EMAIL]</a></div></li>
-            <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg><div><span class="label">Address</span><address data-bind="address">[ADDRESS]</address></div></li>
-            <li><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg><div><span class="label">Working hours</span><span class="value">Monday to Sunday, 9:00 am to 9:00 pm</span></div></li>
-          </ul>
-
-          <a class="btn btn-wa" href="https://wa.me/[WHATSAPP NUMBER]?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> WhatsApp Us</a>
+      <div class="cta-panel reveal">
+        <div class="cta-copy">
+          <h2 id="contact-title">Need AC Service or a New AC? Message us on WhatsApp.</h2>
+          <p>One number for sales, installation, repair, AMC and deep cleaning. We reply during working hours, every day of the week.</p>
+          <div class="cta-actions">
+            <a class="btn btn-wa btn-lg" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"/></svg> Book Your Service</a>
+            <a class="btn btn-light btn-lg" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Chat on WhatsApp</a>
+          </div>
+          <p class="cta-number"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat" data-bind="whatsapp-display">+91 80975 70048</a></p>
+          <p class="cta-hours">Monday to Sunday, 9:00 am to 9:00 pm</p>
+          <div class="cta-send">
+            <h3>Send us</h3>
+            <ul>
+              <li>AC type and brand</li>
+              <li>What's wrong, or what you need</li>
+              <li>Your area</li>
+              <li>A good time to visit</li>
+            </ul>
+          </div>
         </div>
-
-        <form class="enquiry-form" id="enquiry-form" action="send-enquiry.php" method="post" novalidate>
-          <h3>Service enquiry</h3>
-          <p class="form-hint">Fill this in and send it straight to our WhatsApp, or email it to us.</p>
-
-          <div class="field">
-            <label for="f-name">Your name</label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required>
-            <p class="error" id="err-name" aria-live="polite"></p>
-          </div>
-
-          <div class="field">
-            <label for="f-phone">Phone number</label>
-            <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
-            <p class="helper">10-digit mobile number, so we can call you back.</p>
-            <p class="error" aria-live="polite"></p>
-          </div>
-
-          <div class="field-row">
-            <div class="field">
-              <label for="f-service">Service needed</label>
-              <select id="f-service" name="service" required>
-                <option value="">Select a service</option>
-                <option>AC Repair</option>
-                <option>AC Deep Cleaning</option>
-                <option>AC Installation</option>
-                <option>AC Maintenance / AMC</option>
-                <option>Buy a new AC</option>
-                <option>HVAC project</option>
-                <option>VRV / VRF system</option>
-                <option>Ductable AC</option>
-                <option>Cassette AC</option>
-                <option>Something else</option>
-              </select>
-              <p class="error" aria-live="polite"></p>
-            </div>
-            <div class="field">
-              <label for="f-type">AC type <span class="optional">(optional)</span></label>
-              <select id="f-type" name="ac_type">
-                <option value="">Not sure</option>
-                <option>Split AC</option>
-                <option>Window AC</option>
-                <option>Cassette AC</option>
-                <option>Ductable AC</option>
-                <option>VRV / VRF</option>
-                <option>Commercial HVAC</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="f-message">Tell us more <span class="optional">(optional)</span></label>
-            <textarea id="f-message" name="message" rows="4"></textarea>
-            <p class="helper">Brand, number of units, your area, and the problem you're facing.</p>
-          </div>
-
-          <!-- Spam trap: hidden from people, bots tend to fill it -->
-          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-          <div class="form-actions">
-            <button class="btn btn-wa btn-lg" type="button" id="send-wa"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Send Enquiry on WhatsApp</button>
-            <button class="btn btn-outline btn-lg" type="submit" id="send-email"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-.15,0L19.57,82.84a16,16,0,0,0-2.49,29.8L102,154l41.3,84.87A15.86,15.86,0,0,0,157.74,248q.69,0,1.38-.06a15.88,15.88,0,0,0,14-11.51l58.2-191.94c0-.05,0-.1,0-.15A16,16,0,0,0,227.32,28.68ZM157.83,231.85l-.05.14,0-.07-40.06-82.3,48-48a8,8,0,0,0-11.31-11.31l-48,48L24.08,98.25l-.07,0,.14,0L216,40Z"/></svg> Send by Email</button>
-          </div>
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          <p class="form-privacy">We use your details only to respond to this enquiry.</p>
-        </form>
+        <div class="cta-qr">
+          <img src="assets/img/whatsapp-qr.svg" width="475" height="475" alt="QR code that opens a WhatsApp chat with Cool Climate" loading="lazy">
+          <p>Scan to chat from your phone<span>Opens WhatsApp with our number</span></p>
+        </div>
       </div>
     </div>
   </section>
@@ -519,7 +466,7 @@
     <div class="footer-brand">
       <img src="assets/img/logo-sm.png" width="521" height="149" alt="Cool Climate. Sales. Service. Comfort." loading="lazy">
       <p>Sales, service, installation, deep cleaning and HVAC solutions for homes and businesses across Mumbai.</p>
-      <a class="btn btn-wa btn-sm" href="https://wa.me/[WHATSAPP NUMBER]?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> WhatsApp Us</a>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Chat on WhatsApp</a>
     </div>
 
     <nav aria-label="Footer">
@@ -537,33 +484,32 @@
     <div>
       <h3>Services</h3>
       <ul>
-        <li><a href="#services">AC Repair</a></li>
-        <li><a href="#services">AC Installation</a></li>
-        <li><a href="#services">AC Deep Cleaning</a></li>
-        <li><a href="#services">AMC and Maintenance</a></li>
-        <li><a href="#services">VRV / VRF Systems</a></li>
-        <li><a href="#services">Commercial HVAC</a></li>
+        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Sales">AC Sales</a></li>
+        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Installation">Installation</a></li>
+        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Repair">Repair</a></li>
+        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Maintenance / AMC">Maintenance and AMC</a></li>
+        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Deep Cleaning">Deep Cleaning</a></li>
+        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:Commercial HVAC">Commercial HVAC</a></li>
       </ul>
     </div>
 
     <div>
-      <h3>Contact</h3>
+      <h3>WhatsApp</h3>
       <ul>
-        <li><a href="tel:[PHONE NUMBER]" data-tel data-bind="phone">[PHONE NUMBER]</a></li>
-        <li><a href="mailto:[EMAIL]" data-mail data-bind="email">[EMAIL]</a></li>
-        <li><address data-bind="address">[ADDRESS]</address></li>
+        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat" data-bind="whatsapp-display">+91 80975 70048</a></li>
         <li>Monday to Sunday, 9:00 am to 9:00 pm</li>
+        <li>Mumbai, Thane and Navi Mumbai</li>
       </ul>
     </div>
   </div>
 
   <div class="wrap footer-bottom">
     <p>&copy; <span data-year>2026</span> Cool Climate AC Services. All rights reserved.</p>
-    <p>Independent multi-brand AC sales and service, Mumbai.</p>
+    <p>Independent multi-brand AC sales and service, Mumbai. Brand names are trademarks of their respective owners.</p>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/[WHATSAPP NUMBER]?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa aria-label="Chat with us on WhatsApp"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg><span>WhatsApp us</span></a>
+<a class="wa-float" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat" aria-label="Chat with us on WhatsApp"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg><span>WhatsApp us</span></a>
 
 <script src="js/main.js" defer></script>
 </body>

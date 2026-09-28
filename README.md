@@ -1,44 +1,43 @@
 # Cool Climate AC Services - website
 
 A single-page, mobile-first website in plain HTML, CSS and JavaScript. No build
-tools, no Node.js. Upload the folder to any shared host and it works.
+tools, no backend, no email. Every call to action opens WhatsApp. Upload the
+folder to any shared host and it works.
 
-## 1. Before you upload: fill in the business details
+## 1. WhatsApp number and messages
 
-Open `index.html` in any text editor and use Find and Replace on these tokens.
-They appear in a handful of places, all marked with comments.
-
-| Token | Replace with | Example |
-|---|---|---|
-| `[PHONE NUMBER]` | The number as you want it displayed | `+91 98765 43210` |
-| `[WHATSAPP NUMBER]` | Digits only, with country code, no plus or spaces | `919876543210` |
-| `[EMAIL]` | Enquiry email address | `hello@coolclimate.in` |
-| `[ADDRESS]` | Shop or office address | `Shop 4, S.V. Road, Andheri West, Mumbai 400058` |
-| `[WEBSITE URL]` | Your domain, no trailing slash | `https://www.coolclimate.in` |
-
-Also replace `[EMAIL]` in `send-enquiry.php` and `[WEBSITE URL]` in `robots.txt`
-and `sitemap.xml`.
-
-The important ones live on the `<body>` tag in `index.html`:
+Everything reads from the `<body>` tag in `index.html`:
 
 ```html
 <body
-  data-business="Cool Climate AC Services"
-  data-phone="[PHONE NUMBER]"
-  data-whatsapp="[WHATSAPP NUMBER]"
-  data-email="[EMAIL]"
-  data-address="[ADDRESS]"
-  data-wa-message="Hello, I would like to enquire about AC sales/service. Please share more details.">
+  data-whatsapp="918097570048"                 digits only, with country code
+  data-whatsapp-display="+91 80975 70048"      how the number is shown
+  data-wa-chat="Hello Cool Climate, I would like to enquire about AC sales/service. Please share more details."
+  data-wa-book="Hello Cool Climate, I would like to book an AC service.">
 ```
 
-`js/main.js` reads these and fills every phone link, WhatsApp button and footer
-line. Until the WhatsApp number is set, WhatsApp buttons show a reminder instead
-of opening a broken link.
+Two kinds of button:
 
-Working hours are plain text in two places in `index.html` (search for
-"9:00 am") and in the structured data block in the `<head>`.
+- **Chat on WhatsApp** opens a chat with the `data-wa-chat` text.
+- **Book Your Service** opens a chat with a fill-in template: the `data-wa-book`
+  line followed by Service, AC type, Brand, Issue, Area and Preferred time. When
+  a visitor taps a specific service or AC type on the page, that line is
+  pre-filled for them.
 
-## 2. Upload to shared hosting
+If you change the number, also regenerate the QR code in the contact panel
+(`assets/img/whatsapp-qr.svg`). Any free QR generator works; encode
+`https://wa.me/<number>` and save it as SVG or PNG under the same name.
+
+The links in the HTML are already written out for the current number, so they
+work even before JavaScript runs.
+
+## 2. Website address
+
+Replace `[WEBSITE URL]` (no trailing slash, e.g. `https://www.coolclimate.in`)
+in `index.html`, `robots.txt` and `sitemap.xml` once you have a domain. Until
+then the site works fine; only link previews and the sitemap need it.
+
+## 3. Upload to shared hosting
 
 1. Log in to your hosting control panel (cPanel, Plesk, Hostinger hPanel, etc.).
 2. Open the File Manager and go to `public_html` (sometimes `htdocs` or `www`).
@@ -48,78 +47,55 @@ Working hours are plain text in two places in `index.html` (search for
 
 FTP works too (FileZilla, Cyberduck). Same folder, same rule.
 
-## 3. Folder structure
+## 4. Folder structure
 
 ```
 index.html            the whole website
-css/styles.css        all styling
-js/main.js            WhatsApp links, mobile menu, form, scroll effects
-send-enquiry.php      optional: emails the form to you (needs PHP on the host)
+css/styles.css        all styling and animations
+js/main.js            WhatsApp links, mobile menu, scroll effects, services photo swap
 .htaccess             caching and compression for Apache hosts
 robots.txt, sitemap.xml, site.webmanifest
 favicon.ico, favicon-32.png, apple-touch-icon.png
 assets/
-  img/                photos (JPEG + WebP in several sizes), logo, icons, og-image.jpg
+  img/                photos (JPEG + WebP), logo files, og-image.jpg, whatsapp-qr.svg
   brands/             AC brand logos
   icons/              Phosphor icon files (already inlined into index.html; kept for reference)
   fonts/              Plus Jakarta Sans, self-hosted
 ```
 
-## 4. The enquiry form
-
-Two buttons:
-
-- **Send Enquiry on WhatsApp**: builds a WhatsApp message with the customer's
-  name, phone, service, AC type and details, and opens it in WhatsApp. Works
-  everywhere, no server needed.
-- **Send by Email**: posts to `send-enquiry.php`, which uses PHP `mail()`.
-  Set `$to` at the top of that file. If your host blocks `mail()`, ask them to
-  enable it or to give you SMTP details, then use PHPMailer. If email fails, the
-  visitor is told to use WhatsApp instead, so nothing is lost.
-
 ## 5. Brand logos
 
 `assets/brands/` holds official artwork for Daikin, LG, Samsung, Panasonic,
-Voltas, Blue Star, Hitachi, Godrej and Whirlpool (sourced from Wikimedia
-Commons and Simple Icons). Carrier, O General and Lloyd are set in type until
-you add their artwork: save the file in `assets/brands/` and swap the
-`<span class="brand-wordmark">` in the Brands section for an `<img>` like the
-others.
-
-Logos are shown under nominative use to indicate the equipment you service. The
-disclaimer under the grid says you are an independent provider; keep it unless
-you hold an authorised-dealer agreement with a brand.
+Voltas, Blue Star, Hitachi, Godrej and Whirlpool (from Wikimedia Commons and
+Simple Icons). Carrier, O General and Lloyd are set in type until you add their
+artwork: save the file in `assets/brands/` and swap the
+`<span class="brand-wordmark">` for an `<img>` like the others. The logo strip
+is duplicated twice in the HTML so it can scroll continuously; edit both copies.
 
 ## 6. Photos
 
-The photos in `assets/img/` are AI-generated placeholders that fit the layout.
-Replace them with real photos of your team and jobs whenever you can. Keep the
-same file names and roughly the same shapes:
+The photos are AI-generated placeholders without people. Replace them with real
+photos of your installations whenever you can; keep the file names and shapes:
 
 | Files | Shape | Used in |
 |---|---|---|
-| `hero-*.jpg/webp` | portrait 4:5 | hero |
-| `type-*-*.jpg/webp` | square | AC types cards |
-| `deep-cleaning-*.jpg/webp` | 16:9 | featured service card |
-| `team-*.jpg/webp` | 16:9 | Why Us |
+| `hero-split-*` | portrait 4:5 | hero, tall tile |
+| `type-*-480/800` | square | hero small tiles, services photo, AC types |
+| `type-cassette-1200`, `type-ductable-1200` | square | the two wide AC type tiles |
+| `deep-cleaning-*` | portrait | services photo for Deep Cleaning |
 | `og-image.jpg` | 1200 x 630 | link previews on WhatsApp, Facebook, etc. |
-
-Each photo ships in two or three widths (for example `hero-640`, `hero-960`,
-`hero-1280`) so phones download smaller files. If you only have one size, use
-the same file for all widths; it still works.
 
 ## 7. Optional extras
 
-- **Google Maps**: paste an embed `<iframe>` from Google Maps into the Service
-  Area section, or link the address to your Google Business Profile.
-- **Google Business Profile / Instagram / Facebook**: add the URLs to the
-  `"sameAs"` list in the structured data block in `<head>`. This helps local SEO.
+- **Google Business Profile, Instagram, Facebook**: add the URLs to the
+  `"sameAs"` list in the structured data block in `<head>`. Helps local SEO.
 - **Analytics**: paste the tracking snippet just before `</head>`.
+- **Force HTTPS**: once your SSL certificate is active, uncomment the three
+  lines at the bottom of `.htaccess`.
 
 ## 8. Checklist before going live
 
-- [ ] All five tokens replaced (search the folder for `[` to be sure)
-- [ ] WhatsApp button opens a chat with the right number
-- [ ] Test the form on your phone: WhatsApp and Email
-- [ ] SSL certificate active, then enable the HTTPS redirect in `.htaccess`
+- [ ] Tap every WhatsApp button on your phone once
+- [ ] `[WEBSITE URL]` replaced in three files
+- [ ] SSL active, HTTPS redirect enabled
 - [ ] Submit `sitemap.xml` in Google Search Console
