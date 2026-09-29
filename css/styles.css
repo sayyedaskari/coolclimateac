@@ -201,6 +201,7 @@ h3 { font-size: 1.125rem; font-weight: 700; color: var(--navy); line-height: 1.3
 @media (max-width: 1139px) { .header-number { display: none; } }
 
 @media (max-width: 899px) {
+  .header-actions { margin-left: auto; }
   .nav-toggle { display: inline-flex; }
   .site-nav {
     position: fixed; left: 0; right: 0; top: var(--header-h); margin-left: 0;
@@ -391,7 +392,19 @@ h3 { font-size: 1.125rem; font-weight: 700; color: var(--navy); line-height: 1.3
 .brand-wordmark { font-weight: 800; font-size: 1.4rem; letter-spacing: -.02em; line-height: 1; color: var(--brand-color, var(--navy)); white-space: nowrap; }
 .brand-wordmark.caps { font-size: 1.05rem; letter-spacing: .06em; }
 
-@media (max-width: 639px) { .brand-tile { width: 150px; height: 80px; padding: 14px; } .brand-tile img { max-height: 32px; } .brand-wordmark { font-size: 1.1rem; } .brand-wordmark.caps { font-size: .85rem; } }
+@media (max-width: 767px) {
+  .marquee {
+    display: block; width: min(var(--wrap), 100% - 2 * var(--gutter)); margin-inline: auto;
+    -webkit-mask-image: none; mask-image: none;
+  }
+  .marquee-track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding: 0; animation: none; }
+  .marquee-track[aria-hidden="true"] { display: none; }
+  .brand-tile { width: auto; height: 78px; padding: 14px; }
+  .brand-tile img { max-height: 32px; }
+  .brand-tile img.tall { max-height: 42px; }
+  .brand-wordmark { font-size: 1.1rem; }
+  .brand-wordmark.caps { font-size: .85rem; }
+}
 
 /* --------------------------------------------------------------------------
    Why us: how a visit works + benefits
