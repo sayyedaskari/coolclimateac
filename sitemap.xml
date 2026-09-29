@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>[WEBSITE URL]/</loc>
-    <lastmod>2026-09-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://coolclimateac.in/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/hero-room-840.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/hero-bedroom-800.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/hero-units-800.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/svc-sales-800.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/svc-install-800.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/svc-repair-800.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/svc-amc-800.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/svc-hvac-800.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/deep-cleaning-900.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/type-split-800.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/type-window-800.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/type-cassette-1200.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/type-ductable-1200.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/type-vrf-800.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/type-hvac-800.jpg</image:loc></image:image>
+    <image:image><image:loc>https://coolclimateac.in/assets/img/og-image.jpg</image:loc></image:image>
   </url>
 </urlset>

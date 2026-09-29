@@ -135,6 +135,14 @@
     activate(rows[0]);
   }
 
-  /* ---- 6. Footer year --------------------------------------------------- */
+  /* ---- 6. Social links: do nothing until real profile URLs are added ---- */
+  qsa('[data-social]').forEach(function (a) {
+    if (a.getAttribute('href') === '#') {
+      a.removeAttribute('target');
+      a.addEventListener('click', function (e) { e.preventDefault(); });
+    }
+  });
+
+  /* ---- 7. Footer year --------------------------------------------------- */
   qsa('[data-year]').forEach(function (el) { el.textContent = String(new Date().getFullYear()); });
 })();

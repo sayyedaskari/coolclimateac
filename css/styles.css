@@ -400,6 +400,7 @@ h3 { font-size: 1.125rem; font-weight: 700; color: var(--navy); line-height: 1.3
   .marquee-track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding: 0; animation: none; }
   .marquee-track[aria-hidden="true"] { display: none; }
   .brand-tile { width: auto; height: 78px; padding: 14px; }
+  .brand-tile img, .brand-wordmark { filter: none; opacity: 1; } /* no hover on phones, so show colour directly */
   .brand-tile img { max-height: 32px; }
   .brand-tile img.tall { max-height: 42px; }
   .brand-wordmark { font-size: 1.1rem; }
@@ -472,6 +473,51 @@ h3 { font-size: 1.125rem; font-weight: 700; color: var(--navy); line-height: 1.3
 
 @media (max-width: 1023px) { .area-grid { grid-template-columns: 1fr; } }
 @media (max-width: 639px) { .area-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* --------------------------------------------------------------------------
+   FAQ: native <details> accordion
+   -------------------------------------------------------------------------- */
+.faq-list { max-width: 820px; margin-inline: auto; border-top: 1px solid var(--line-strong); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 22px 0;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary h3 {
+  font-size: clamp(1.02rem, .95rem + .3vw, 1.15rem); line-height: 1.4;
+  transition: color .2s;
+}
+.faq-item summary:hover h3 { color: var(--blue); }
+.faq-toggle {
+  flex: none; width: 36px; height: 36px; border-radius: 50%;
+  border: 1.5px solid var(--line-strong); color: var(--navy);
+  display: inline-flex; align-items: center; justify-content: center; font-size: 1rem;
+  transition: transform .45s var(--ease), background-color .25s, color .25s, border-color .25s;
+}
+.faq-item summary:hover .faq-toggle { border-color: var(--blue); color: var(--blue); }
+.faq-item[open] .faq-toggle { transform: rotate(45deg); background: var(--blue); border-color: var(--blue); color: #fff; }
+.faq-answer { padding: 0 56px 24px 0; color: var(--text-2); max-width: 70ch; }
+.faq-answer a { color: var(--blue); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.faq-more { text-align: center; margin-top: 36px; }
+@media (max-width: 559px) { .faq-answer { padding-right: 0; } }
+
+/* --------------------------------------------------------------------------
+   Social links (Facebook, Instagram)
+   -------------------------------------------------------------------------- */
+.social-links { display: flex; gap: 10px; }
+.social-link {
+  width: 40px; height: 40px; border-radius: 50%; flex: none;
+  display: inline-flex; align-items: center; justify-content: center; font-size: 1.2rem;
+  border: 1.5px solid var(--line-strong); color: var(--navy); background: #fff;
+  transition: transform .25s var(--ease), background-color .2s, color .2s, border-color .2s;
+}
+.social-link:hover { transform: translateY(-2px); background: var(--navy); border-color: var(--navy); color: #fff; }
+.footer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.cta-social { display: flex; align-items: center; gap: 14px; margin-top: 18px; font-size: .9rem; color: rgba(255, 255, 255, .68); }
+.cta-social .social-link { background: rgba(255, 255, 255, .1); border-color: rgba(255, 255, 255, .2); color: #fff; }
+.cta-social .social-link:hover { background: #fff; border-color: #fff; color: var(--navy); }
 
 /* --------------------------------------------------------------------------
    Contact: WhatsApp panel
@@ -591,6 +637,12 @@ h3 { font-size: 1.125rem; font-weight: 700; color: var(--navy); line-height: 1.3
   .js .hero-mosaic .m1 { animation-delay: .15s; }
   .js .hero-mosaic .m2 { animation-delay: .3s; }
   .js .hero-mosaic .m3 { animation-delay: .45s; }
+
+  @keyframes faq-in {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .faq-item[open] .faq-answer { animation: faq-in .45s var(--ease); }
 
   .js .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
   .js .reveal.is-visible { opacity: 1; transform: none; }
