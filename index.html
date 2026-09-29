@@ -8,14 +8,17 @@
 <!-- =====================================================================
      EDIT YOUR DETAILS
      1) WhatsApp number and messages: the data-* attributes on the <body> tag.
-     2) Website address: replace [WEBSITE URL] here in the <head> (and in
-        robots.txt and sitemap.xml) once you have a domain.
+     2) Website address: set to https://coolclimateac.in (no www) in this file,
+        robots.txt and sitemap.xml. If the domain ever changes, search and
+        replace it in all three.
+     3) Facebook and Instagram: search for data-social and replace href="#"
+        with your page URLs, then add the same URLs to "sameAs" below.
      ===================================================================== -->
 
-<title>AC Sales, Service &amp; Repair in Mumbai | Cool Climate AC Services</title>
-<meta name="description" content="Cool Climate AC Services: AC sales, installation, repair, AMC, deep cleaning and HVAC solutions across Mumbai. Split, window, cassette, ductable and VRV/VRF systems, all major brands. Book on WhatsApp.">
-<link rel="canonical" href="[WEBSITE URL]/">
-<meta name="robots" content="index, follow">
+<title>AC Service, Repair &amp; Installation in Mumbai | Cool Climate</title>
+<meta name="description" content="AC service, repair, installation, AMC and deep cleaning across Mumbai, Thane and Navi Mumbai. All AC types and brands. Book on WhatsApp in a minute.">
+<link rel="canonical" href="https://coolclimateac.in/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#1a6fb3">
 <meta name="geo.region" content="IN-MH">
 <meta name="geo.placename" content="Mumbai, Maharashtra">
@@ -25,16 +28,17 @@
 <meta property="og:site_name" content="Cool Climate AC Services">
 <meta property="og:title" content="AC Sales, Service &amp; HVAC Solutions in Mumbai">
 <meta property="og:description" content="Split, window, cassette, ductable and VRV/VRF systems from all major brands. Book sales, installation, repair, AMC or deep cleaning on WhatsApp.">
-<meta property="og:url" content="[WEBSITE URL]/">
-<meta property="og:image" content="[WEBSITE URL]/assets/img/og-image.jpg">
+<meta property="og:url" content="https://coolclimateac.in/">
+<meta property="og:image" content="https://coolclimateac.in/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:alt" content="Cool Climate AC Services, AC sales, service and HVAC solutions in Mumbai">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AC Sales, Service &amp; HVAC Solutions in Mumbai">
 <meta name="twitter:description" content="All AC types, all major brands. Book sales, installation, repair, AMC or deep cleaning on WhatsApp.">
-<meta name="twitter:image" content="[WEBSITE URL]/assets/img/og-image.jpg">
+<meta name="twitter:image" content="https://coolclimateac.in/assets/img/og-image.jpg">
 
 <!-- Icons -->
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -45,50 +49,388 @@
 <!-- Performance: self-hosted font and the first hero photo load early -->
 <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/hero-room-560.webp 560w, assets/img/hero-room-840.webp 840w" imagesizes="(min-width: 1024px) 22vw, 55vw">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.css?v=20260929">
 
-<!-- Local business structured data for Google -->
+<!-- Structured data for Google: business, website and FAQ.
+     When your Facebook and Instagram pages are live, add their URLs to "sameAs". -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HVACBusiness",
-  "name": "Cool Climate AC Services",
-  "description": "AC sales, installation, repair, AMC, deep cleaning and HVAC solutions for homes and businesses across Mumbai. All AC types and all major brands.",
-  "url": "[WEBSITE URL]/",
-  "logo": "[WEBSITE URL]/assets/img/logo.png",
-  "image": "[WEBSITE URL]/assets/img/og-image.jpg",
-  "telephone": "+91 80975 70048",
-  "sameAs": ["https://wa.me/918097570048"],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Mumbai",
-    "addressRegion": "Maharashtra",
-    "addressCountry": "IN"
-  },
-  "areaServed": [
-    { "@type": "City", "name": "Mumbai" },
-    { "@type": "City", "name": "Navi Mumbai" },
-    { "@type": "City", "name": "Thane" }
-  ],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "09:00",
-    "closes": "21:00"
-  },
-  "priceRange": "₹₹",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "AC services",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Sales" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Installation" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Repair" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Maintenance and AMC" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Deep Cleaning" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial HVAC, VRV/VRF and Ductable Systems" } }
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "HVACBusiness",
+      "@id": "https://coolclimateac.in/#business",
+      "name": "Cool Climate AC Services",
+      "alternateName": "Cool Climate",
+      "slogan": "Sales. Service. Comfort.",
+      "description": "AC sales, installation, repair, AMC, deep cleaning and HVAC solutions for homes and businesses across Mumbai, Thane and Navi Mumbai. All AC types and all major brands.",
+      "url": "https://coolclimateac.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://coolclimateac.in/assets/img/logo.png",
+        "width": 1043,
+        "height": 299
+      },
+      "image": [
+        "https://coolclimateac.in/assets/img/og-image.jpg",
+        "https://coolclimateac.in/assets/img/hero-room-840.jpg"
+      ],
+      "telephone": "+91 80975 70048",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91 80975 70048",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "url": "https://wa.me/918097570048"
+      },
+      "sameAs": [
+        "https://wa.me/918097570048"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Mumbai"
+        },
+        {
+          "@type": "City",
+          "name": "Thane"
+        },
+        {
+          "@type": "City",
+          "name": "Navi Mumbai"
+        },
+        {
+          "@type": "City",
+          "name": "Mira-Bhayandar"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      "priceRange": "₹₹",
+      "currenciesAccepted": "INR",
+      "knowsAbout": [
+        "Split AC",
+        "Window AC",
+        "Cassette AC",
+        "Ductable AC",
+        "VRV and VRF systems",
+        "Commercial HVAC",
+        "AC deep cleaning",
+        "AC annual maintenance contracts"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AC services in Mumbai",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AC Sales",
+              "serviceType": "AC Sales",
+              "description": "New split, window, cassette and ductable ACs from all major brands, with advice on tonnage and star rating.",
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "Mumbai"
+                },
+                {
+                  "@type": "City",
+                  "name": "Thane"
+                },
+                {
+                  "@type": "City",
+                  "name": "Navi Mumbai"
+                },
+                {
+                  "@type": "City",
+                  "name": "Mira-Bhayandar"
+                }
+              ],
+              "provider": {
+                "@id": "https://coolclimateac.in/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AC Installation",
+              "serviceType": "AC Installation",
+              "description": "Installation with copper piping, drainage, vacuuming and secure outdoor unit mounting.",
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "Mumbai"
+                },
+                {
+                  "@type": "City",
+                  "name": "Thane"
+                },
+                {
+                  "@type": "City",
+                  "name": "Navi Mumbai"
+                },
+                {
+                  "@type": "City",
+                  "name": "Mira-Bhayandar"
+                }
+              ],
+              "provider": {
+                "@id": "https://coolclimateac.in/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AC Repair",
+              "serviceType": "AC Repair",
+              "description": "Diagnosis and repair of cooling, leakage, noise, gas, PCB and compressor faults.",
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "Mumbai"
+                },
+                {
+                  "@type": "City",
+                  "name": "Thane"
+                },
+                {
+                  "@type": "City",
+                  "name": "Navi Mumbai"
+                },
+                {
+                  "@type": "City",
+                  "name": "Mira-Bhayandar"
+                }
+              ],
+              "provider": {
+                "@id": "https://coolclimateac.in/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AC Maintenance and AMC",
+              "serviceType": "AC Maintenance and AMC",
+              "description": "Seasonal servicing and annual maintenance contracts for homes, shops and offices.",
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "Mumbai"
+                },
+                {
+                  "@type": "City",
+                  "name": "Thane"
+                },
+                {
+                  "@type": "City",
+                  "name": "Navi Mumbai"
+                },
+                {
+                  "@type": "City",
+                  "name": "Mira-Bhayandar"
+                }
+              ],
+              "provider": {
+                "@id": "https://coolclimateac.in/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AC Deep Cleaning",
+              "serviceType": "AC Deep Cleaning",
+              "description": "Foam and jet-wash cleaning of coils, blower and filters to remove dust, mould and odour.",
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "Mumbai"
+                },
+                {
+                  "@type": "City",
+                  "name": "Thane"
+                },
+                {
+                  "@type": "City",
+                  "name": "Navi Mumbai"
+                },
+                {
+                  "@type": "City",
+                  "name": "Mira-Bhayandar"
+                }
+              ],
+              "provider": {
+                "@id": "https://coolclimateac.in/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial HVAC, VRV/VRF and Ductable Systems",
+              "serviceType": "Commercial HVAC, VRV/VRF and Ductable Systems",
+              "description": "Supply, installation and maintenance of HVAC, VRV/VRF, cassette and ductable systems for commercial spaces.",
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "Mumbai"
+                },
+                {
+                  "@type": "City",
+                  "name": "Thane"
+                },
+                {
+                  "@type": "City",
+                  "name": "Navi Mumbai"
+                },
+                {
+                  "@type": "City",
+                  "name": "Mira-Bhayandar"
+                }
+              ],
+              "provider": {
+                "@id": "https://coolclimateac.in/#business"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://coolclimateac.in/#website",
+      "url": "https://coolclimateac.in/",
+      "name": "Cool Climate AC Services",
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://coolclimateac.in/#business"
+      }
+    },
+    {
+      "@type": [
+        "WebPage",
+        "FAQPage"
+      ],
+      "@id": "https://coolclimateac.in/#webpage",
+      "url": "https://coolclimateac.in/",
+      "name": "AC Service, Repair & Installation in Mumbai | Cool Climate",
+      "description": "AC service, repair, installation, AMC and deep cleaning across Mumbai, Thane and Navi Mumbai. All AC types and brands. Book on WhatsApp in a minute.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@id": "https://coolclimateac.in/#website"
+      },
+      "about": {
+        "@id": "https://coolclimateac.in/#business"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://coolclimateac.in/assets/img/og-image.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I book an AC service with Cool Climate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tap Book Your Service anywhere on this page, or message us on WhatsApp at +91 80975 70048. Tell us the AC type, brand, what's wrong and your area, and we'll confirm a time slot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which areas in Mumbai do you cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All of Mumbai, from Colaba and Worli to Andheri, Borivali, Dahisar, Ghatkopar and Mulund, plus Thane, Navi Mumbai, Mira Road and Bhayandar. Not sure about your area? Send it to us on WhatsApp and we'll confirm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which AC brands do you service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All major brands, including Daikin, LG, Samsung, Panasonic, Voltas, Blue Star, Carrier, Hitachi, O General, Lloyd, Godrej and Whirlpool. We're an independent multi-brand service, so one team can look after every unit you own."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does AC service cost in Mumbai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the AC type, its capacity and the work needed. For servicing and deep cleaning, send us the details on WhatsApp and we'll share the charges up front. For repairs, the technician diagnoses the fault and gives you a clear estimate before any work starts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should an AC be serviced?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most homes in Mumbai do well with a routine service before summer and again after the monsoon, plus a deep clean once a year. ACs that run all day in offices and shops need servicing more often."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between AC servicing and deep cleaning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A routine service cleans the filters and checks cooling, gas pressure and drainage. Deep cleaning goes further: the coils, blower and drain tray are foam- and jet-washed, with a cover bag to keep your wall dry, which removes built-up dust, mould and odour."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer AMC for homes and offices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our annual maintenance contracts cover scheduled servicing for homes, shops and offices, from a single split AC to a full floor of units. Message us the number and type of ACs for a quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you install and service VRV/VRF, cassette and ductable systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Along with split and window ACs, we supply, install and service cassette, ductable and VRV/VRF systems and commercial HVAC for offices, retail, clinics and industrial units."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help me choose a new AC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Tell us the room size, how much sun it gets and your budget, and we'll suggest the right tonnage, star rating and brand, then handle the installation."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>
@@ -159,23 +501,23 @@
         </ul>
       </div>
 
-      <div class="hero-mosaic" aria-hidden="true">
+      <div class="hero-mosaic">
         <figure class="m1">
           <picture>
             <source type="image/webp" srcset="assets/img/hero-room-560.webp 560w, assets/img/hero-room-840.webp 840w" sizes="(min-width: 1024px) 22vw, 55vw">
-            <img src="assets/img/hero-room-560.jpg" srcset="assets/img/hero-room-560.jpg 560w, assets/img/hero-room-840.jpg 840w" sizes="(min-width: 1024px) 22vw, 55vw" width="560" height="700" alt="" fetchpriority="high" decoding="async">
+            <img src="assets/img/hero-room-560.jpg" srcset="assets/img/hero-room-560.jpg 560w, assets/img/hero-room-840.jpg 840w" sizes="(min-width: 1024px) 22vw, 55vw" width="560" height="700" alt="Wall-mounted split AC on a slatted feature wall in a modern living room" fetchpriority="high" decoding="async">
           </picture>
         </figure>
         <figure class="m2">
           <picture>
             <source type="image/webp" srcset="assets/img/hero-bedroom-480.webp 480w, assets/img/hero-bedroom-800.webp 800w" sizes="(min-width: 1024px) 16vw, 40vw">
-            <img src="assets/img/hero-bedroom-480.jpg" srcset="assets/img/hero-bedroom-480.jpg 480w, assets/img/hero-bedroom-800.jpg 800w" sizes="(min-width: 1024px) 16vw, 40vw" width="480" height="480" alt="" decoding="async">
+            <img src="assets/img/hero-bedroom-480.jpg" srcset="assets/img/hero-bedroom-480.jpg 480w, assets/img/hero-bedroom-800.jpg 800w" sizes="(min-width: 1024px) 16vw, 40vw" width="480" height="480" alt="Split AC above the bed in a blue bedroom" decoding="async">
           </picture>
         </figure>
         <figure class="m3">
           <picture>
             <source type="image/webp" srcset="assets/img/hero-units-480.webp 480w, assets/img/hero-units-800.webp 800w" sizes="(min-width: 1024px) 16vw, 40vw">
-            <img src="assets/img/hero-units-480.jpg" srcset="assets/img/hero-units-480.jpg 480w, assets/img/hero-units-800.jpg 800w" sizes="(min-width: 1024px) 16vw, 40vw" width="480" height="480" alt="" decoding="async">
+            <img src="assets/img/hero-units-480.jpg" srcset="assets/img/hero-units-480.jpg 480w, assets/img/hero-units-800.jpg 800w" sizes="(min-width: 1024px) 16vw, 40vw" width="480" height="480" alt="Outdoor AC condenser units mounted on a building wall" decoding="async">
           </picture>
         </figure>
       </div>
@@ -186,7 +528,7 @@
   <section class="section services" id="services" aria-labelledby="services-title">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2 id="services-title">Sales, installation, repair, AMC and deep cleaning. One team, one number.</h2>
+        <h2 id="services-title">AC sales, service and repair across Mumbai. One team, one number.</h2>
         <p>Tap any service to open WhatsApp with the booking template already filled in.</p>
       </div>
 
@@ -201,28 +543,28 @@
           </li>
           <li class="service-row" data-img="window">
             <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Installation">
-              <h3>Installation</h3>
+              <h3>AC Installation</h3>
               <p>Neat copper piping, proper drainage, vacuuming and secure outdoor mounting, so the unit runs efficiently for years.</p>
               <span class="row-arrow"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
             </a>
           </li>
           <li class="service-row" data-img="cassette">
             <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Repair">
-              <h3>Repair</h3>
+              <h3>AC Repair</h3>
               <p>Not cooling, water dripping, noise, gas leaks, PCB or compressor faults. We diagnose on the first visit and quote before we start.</p>
               <span class="row-arrow"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
             </a>
           </li>
           <li class="service-row" data-img="ductable">
             <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Maintenance / AMC">
-              <h3>Maintenance and AMC</h3>
+              <h3>AC Maintenance and AMC</h3>
               <p>Annual maintenance contracts and seasonal servicing for homes, shops and offices. Fewer breakdowns, lower electricity bills.</p>
               <span class="row-arrow"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
             </a>
           </li>
           <li class="service-row" data-img="cleaning">
             <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Deep Cleaning">
-              <h3>Deep Cleaning</h3>
+              <h3>AC Deep Cleaning</h3>
               <p>Foam and jet-wash cleaning of coils, blower and filters, with a cover to keep your wall dry. Removes dust, mould and odour.</p>
               <span class="row-arrow"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
             </a>
@@ -237,12 +579,12 @@
         </ul>
 
         <div class="service-visual reveal" aria-hidden="true">
-          <picture><source type="image/webp" srcset="assets/img/svc-sales-800.webp"><img data-for="split" src="assets/img/svc-sales-800.jpg" width="800" height="1000" alt="" loading="lazy" decoding="async"></picture>
-          <picture><source type="image/webp" srcset="assets/img/svc-install-800.webp"><img data-for="window" src="assets/img/svc-install-800.jpg" width="800" height="1000" alt="" loading="lazy" decoding="async"></picture>
-          <picture><source type="image/webp" srcset="assets/img/svc-repair-800.webp"><img data-for="cassette" src="assets/img/svc-repair-800.jpg" width="800" height="1000" alt="" loading="lazy" decoding="async"></picture>
-          <picture><source type="image/webp" srcset="assets/img/svc-amc-800.webp"><img data-for="ductable" src="assets/img/svc-amc-800.jpg" width="800" height="1000" alt="" loading="lazy" decoding="async"></picture>
-          <picture><source type="image/webp" srcset="assets/img/deep-cleaning-900.webp"><img data-for="cleaning" src="assets/img/deep-cleaning-900.jpg" width="900" height="1213" alt="" loading="lazy" decoding="async"></picture>
-          <picture><source type="image/webp" srcset="assets/img/svc-hvac-800.webp"><img data-for="hvac" src="assets/img/svc-hvac-800.jpg" width="800" height="1000" alt="" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="assets/img/svc-sales-800.webp"><img data-for="split" src="assets/img/svc-sales-800.jpg" width="800" height="1000" alt="Living room with a wall-mounted AC above the TV" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="assets/img/svc-install-800.webp"><img data-for="window" src="assets/img/svc-install-800.jpg" width="800" height="1000" alt="Copper refrigerant piping for an AC installation" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="assets/img/svc-repair-800.webp"><img data-for="cassette" src="assets/img/svc-repair-800.jpg" width="800" height="1000" alt="Pressure gauges on HVAC equipment" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="assets/img/svc-amc-800.webp"><img data-for="ductable" src="assets/img/svc-amc-800.jpg" width="800" height="1000" alt="Outdoor AC unit against a teal wall" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="assets/img/deep-cleaning-900.webp"><img data-for="cleaning" src="assets/img/deep-cleaning-900.jpg" width="900" height="1213" alt="Split AC indoor unit being foam-cleaned with a drip bag underneath" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="assets/img/svc-hvac-800.webp"><img data-for="hvac" src="assets/img/svc-hvac-800.jpg" width="800" height="1000" alt="Exposed ducts and pipework in a commercial building" loading="lazy" decoding="async"></picture>
         </div>
       </div>
     </div>
@@ -402,7 +744,7 @@
   <section class="section area" id="service-area" aria-labelledby="area-title">
     <div class="wrap area-grid">
       <div class="area-intro reveal">
-        <h2 id="area-title">Serving all of Mumbai and nearby areas</h2>
+        <h2 id="area-title">AC service across all of Mumbai and nearby areas</h2>
         <p>From Colaba to Dahisar and Mulund, plus Thane and Navi Mumbai. Not sure if we reach you? Ask on WhatsApp and we'll confirm.</p>
         <a class="btn btn-ghost" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Ask about your area</a>
       </div>
@@ -427,6 +769,55 @@
     </div>
   </section>
 
+  <!-- ================= FAQ ================= -->
+  <section class="section faq" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <h2 id="faq-title">AC service questions, answered</h2>
+        <p>Booking, pricing, brands and areas. Anything else, just ask on WhatsApp.</p>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item" open>
+          <summary><h3>How do I book an AC service with Cool Climate?</h3><span class="faq-toggle"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p class="faq-answer">Tap Book Your Service anywhere on this page, or message us on WhatsApp at <a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat">+91 80975 70048</a>. Tell us the AC type, brand, what's wrong and your area, and we'll confirm a time slot.</p>
+        </details>
+        <details class="faq-item">
+          <summary><h3>Which areas in Mumbai do you cover?</h3><span class="faq-toggle"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p class="faq-answer">All of Mumbai, from Colaba and Worli to Andheri, Borivali, Dahisar, Ghatkopar and Mulund, plus Thane, Navi Mumbai, Mira Road and Bhayandar. Not sure about your area? Send it to us on WhatsApp and we'll confirm.</p>
+        </details>
+        <details class="faq-item">
+          <summary><h3>Which AC brands do you service?</h3><span class="faq-toggle"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p class="faq-answer">All major brands, including Daikin, LG, Samsung, Panasonic, Voltas, Blue Star, Carrier, Hitachi, O General, Lloyd, Godrej and Whirlpool. We're an independent multi-brand service, so one team can look after every unit you own.</p>
+        </details>
+        <details class="faq-item">
+          <summary><h3>How much does AC service cost in Mumbai?</h3><span class="faq-toggle"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p class="faq-answer">It depends on the AC type, its capacity and the work needed. For servicing and deep cleaning, send us the details on WhatsApp and we'll share the charges up front. For repairs, the technician diagnoses the fault and gives you a clear estimate before any work starts.</p>
+        </details>
+        <details class="faq-item">
+          <summary><h3>How often should an AC be serviced?</h3><span class="faq-toggle"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p class="faq-answer">Most homes in Mumbai do well with a routine service before summer and again after the monsoon, plus a deep clean once a year. ACs that run all day in offices and shops need servicing more often.</p>
+        </details>
+        <details class="faq-item">
+          <summary><h3>What is the difference between AC servicing and deep cleaning?</h3><span class="faq-toggle"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p class="faq-answer">A routine service cleans the filters and checks cooling, gas pressure and drainage. Deep cleaning goes further: the coils, blower and drain tray are foam- and jet-washed, with a cover bag to keep your wall dry, which removes built-up dust, mould and odour.</p>
+        </details>
+        <details class="faq-item">
+          <summary><h3>Do you offer AMC for homes and offices?</h3><span class="faq-toggle"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p class="faq-answer">Yes. Our annual maintenance contracts cover scheduled servicing for homes, shops and offices, from a single split AC to a full floor of units. Message us the number and type of ACs for a quote.</p>
+        </details>
+        <details class="faq-item">
+          <summary><h3>Do you install and service VRV/VRF, cassette and ductable systems?</h3><span class="faq-toggle"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p class="faq-answer">Yes. Along with split and window ACs, we supply, install and service cassette, ductable and VRV/VRF systems and commercial HVAC for offices, retail, clinics and industrial units.</p>
+        </details>
+        <details class="faq-item">
+          <summary><h3>Can you help me choose a new AC?</h3><span class="faq-toggle"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p class="faq-answer">Yes. Tell us the room size, how much sun it gets and your budget, and we'll suggest the right tonnage, star rating and brand, then handle the installation.</p>
+        </details>
+      </div>
+      <p class="faq-more reveal"><a class="btn btn-ghost" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Ask us something else</a></p>
+    </div>
+  </section>
+
   <!-- ================= CONTACT ================= -->
   <section class="section contact" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
@@ -440,6 +831,7 @@
           </div>
           <p class="cta-number"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat" data-bind="whatsapp-display">+91 80975 70048</a></p>
           <p class="cta-hours">Monday to Sunday, 9:00 am to 9:00 pm</p>
+          <div class="cta-social"><span>Follow us</span><div class="social-links"><a class="social-link" href="#" data-social="facebook" target="_blank" rel="noopener" aria-label="Cool Climate on Facebook"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg></a><a class="social-link" href="#" data-social="instagram" target="_blank" rel="noopener" aria-label="Cool Climate on Instagram"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg></a></div></div>
           <div class="cta-send">
             <h3>Send us</h3>
             <ul>
@@ -466,7 +858,10 @@
     <div class="footer-brand">
       <img src="assets/img/logo-sm.png" width="521" height="149" alt="Cool Climate. Sales. Service. Comfort." loading="lazy">
       <p>Sales, service, installation, deep cleaning and HVAC solutions for homes and businesses across Mumbai.</p>
-      <a class="btn btn-wa btn-sm" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Chat on WhatsApp</a>
+      <div class="footer-actions">
+        <a class="btn btn-wa btn-sm" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> Chat on WhatsApp</a>
+        <div class="social-links"><a class="social-link" href="#" data-social="facebook" target="_blank" rel="noopener" aria-label="Cool Climate on Facebook"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg></a><a class="social-link" href="#" data-social="instagram" target="_blank" rel="noopener" aria-label="Cool Climate on Instagram"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg></a></div>
+      </div>
     </div>
 
     <nav aria-label="Footer">
@@ -477,6 +872,7 @@
         <li><a href="#ac-types">AC Types</a></li>
         <li><a href="#brands">Brands</a></li>
         <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -485,16 +881,16 @@
       <h3>Services</h3>
       <ul>
         <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Sales">AC Sales</a></li>
-        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Installation">Installation</a></li>
-        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Repair">Repair</a></li>
-        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Maintenance / AMC">Maintenance and AMC</a></li>
-        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Deep Cleaning">Deep Cleaning</a></li>
+        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Installation">AC Installation</a></li>
+        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Repair">AC Repair</a></li>
+        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Maintenance / AMC">AC Maintenance and AMC</a></li>
+        <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:AC Deep Cleaning">AC Deep Cleaning</a></li>
         <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="book:Commercial HVAC">Commercial HVAC</a></li>
       </ul>
     </div>
 
     <div>
-      <h3>WhatsApp</h3>
+      <h3>Contact</h3>
       <ul>
         <li><a href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat" data-bind="whatsapp-display">+91 80975 70048</a></li>
         <li>Monday to Sunday, 9:00 am to 9:00 pm</li>
@@ -511,6 +907,6 @@
 
 <a class="wa-float" href="https://wa.me/918097570048?text=Hello%20Cool%20Climate%2C%20I%20would%20like%20to%20enquire%20about%20AC%20sales%2Fservice.%20Please%20share%20more%20details." data-wa="chat" aria-label="Chat with us on WhatsApp"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg><span>WhatsApp us</span></a>
 
-<script src="js/main.js" defer></script>
+<script src="js/main.js?v=20260929" defer></script>
 </body>
 </html>

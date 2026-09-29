@@ -33,11 +33,41 @@ work even before JavaScript runs.
 
 ## 2. Website address
 
-Replace `[WEBSITE URL]` (no trailing slash, e.g. `https://www.coolclimate.in`)
-in `index.html`, `robots.txt` and `sitemap.xml` once you have a domain. Until
-then the site works fine; only link previews and the sitemap need it.
+The site is set up for **https://coolclimateac.in** (https, no `www`). That
+address is used in `index.html` (canonical link, social previews, structured
+data), `robots.txt` and `sitemap.xml`. If the domain ever changes, search and
+replace it in those three files.
 
-## 3. Upload to shared hosting
+Before launch:
+
+1. Point the domain's DNS at your hosting account.
+2. Turn on the free SSL certificate in the hosting panel (often called AutoSSL
+   or Let's Encrypt) and check that https://coolclimateac.in loads.
+3. Then, and only then, uncomment the three redirect lines in `.htaccess`.
+   They send `http://` and `www.` visitors to the one canonical address.
+
+## 3. Facebook and Instagram links
+
+Four links (two in the contact panel, two in the footer) currently point to `#`.
+Clicking them does nothing until real URLs go in.
+
+1. In `index.html`, search for `data-social="facebook"` and replace `href="#"`
+   with your Facebook page URL in both places. Do the same for
+   `data-social="instagram"`.
+2. In the structured data block in `<head>`, add both URLs to the `"sameAs"`
+   list, for example:
+
+```json
+"sameAs": [
+  "https://wa.me/918097570048",
+  "https://www.facebook.com/yourpage",
+  "https://www.instagram.com/yourhandle"
+],
+```
+
+That second step tells Google the profiles belong to this business.
+
+## 4. Upload to shared hosting
 
 1. Log in to your hosting control panel (cPanel, Plesk, Hostinger hPanel, etc.).
 2. Open the File Manager and go to `public_html` (sometimes `htdocs` or `www`).
@@ -47,14 +77,20 @@ then the site works fine; only link previews and the sitemap need it.
 
 FTP works too (FileZilla, Cyberduck). Same folder, same rule.
 
-## 4. Folder structure
+The branded 404 page and the `/index.html` redirect assume the site sits at the
+domain root (`public_html` itself, not a subfolder).
+
+## 5. Folder structure
 
 ```
 index.html            the whole website
+404.html              branded "page not found" page
 css/styles.css        all styling and animations
 js/main.js            WhatsApp links, mobile menu, scroll effects, services photo swap
-.htaccess             caching and compression for Apache hosts
-robots.txt, sitemap.xml, site.webmanifest
+.htaccess             redirects, caching, compression and security headers (Apache hosts)
+robots.txt            lets search engines crawl everything, points to the sitemap
+sitemap.xml           the page and its main images, for Google Search Console
+site.webmanifest      app name and icons for "add to home screen"
 favicon.ico, favicon-32.png, apple-touch-icon.png
 assets/
   img/                photos (JPEG + WebP), logo files, og-image.jpg, whatsapp-qr.svg
@@ -63,7 +99,7 @@ assets/
   fonts/              Plus Jakarta Sans, self-hosted
 ```
 
-## 5. Brand logos
+## 6. Brand logos
 
 `assets/brands/` holds official artwork for Daikin, LG, Samsung, Panasonic,
 Voltas, Blue Star, Hitachi, Godrej and Whirlpool (from Wikimedia Commons and
@@ -72,7 +108,7 @@ artwork: save the file in `assets/brands/` and swap the
 `<span class="brand-wordmark">` for an `<img>` like the others. The logo strip
 is duplicated twice in the HTML so it can scroll continuously; edit both copies.
 
-## 6. Photos and credits
+## 7. Photos and credits
 
 Most photos are free stock from Unsplash, used under the Unsplash License
 (free for commercial use, no attribution required, but credit is good manners).
@@ -103,17 +139,63 @@ To swap a photo, keep the file name and shape (the hero tall tile is 4:5, the
 services photos are 4:5, the AC type tiles are square except the two wide ones,
 which are about 2:1) and overwrite both the `.jpg` and `.webp`.
 
-## 7. Optional extras
+## 8. SEO: what is built in and what to do after launch
 
-- **Google Business Profile, Instagram, Facebook**: add the URLs to the
-  `"sameAs"` list in the structured data block in `<head>`. Helps local SEO.
-- **Analytics**: paste the tracking snippet just before `</head>`.
-- **Force HTTPS**: once your SSL certificate is active, uncomment the three
-  lines at the bottom of `.htaccess`.
+Already in the page:
 
-## 8. Checklist before going live
+- **Title and description** written for the searches that matter locally: AC
+  service, repair and installation in Mumbai, Thane and Navi Mumbai.
+- **Headings** carry the keywords (one H1, a keyword H2 per section, service
+  names as "AC Repair", "AC Deep Cleaning" and so on).
+- **FAQ section** with nine questions people search before booking: cost,
+  service frequency, brands, areas, AMC, commercial systems.
+- **Structured data** (JSON-LD): the business as an HVAC business with services,
+  service area, hours and contact point, plus the website and the FAQ. Test it
+  at https://search.google.com/test/rich-results once the site is live.
+  Google currently shows FAQ rich results only for government and health sites,
+  so the FAQ markup will not add dropdowns under the search listing, but it
+  still helps Google, Bing and AI assistants understand the page.
+- **Image SEO**: descriptive alt text on every photo, WebP with JPEG fallback,
+  and an image sitemap.
+- **Social previews**: Open Graph and Twitter tags with a 1200 x 630 image, so
+  links shared on WhatsApp and Facebook show a proper card.
+- **Technical**: canonical URL, `robots` meta allowing large image previews,
+  `robots.txt`, `sitemap.xml`, a branded 404 page, `/index.html` redirected to
+  `/`, compression and caching in `.htaccess`, self-hosted font, lazy-loaded
+  images, and a fast first load on phones.
 
+After launch:
+
+1. **Google Search Console** (https://search.google.com/search-console): add
+   the domain, verify it (the DNS method is easiest), submit `sitemap.xml`,
+   and use URL Inspection to request indexing of the homepage.
+2. **Bing Webmaster Tools** (https://www.bing.com/webmasters): import the site
+   from Search Console in one click. Bing also feeds ChatGPT search results.
+3. **Google Business Profile**: this drives the map results for "AC repair near
+   me". Link it to the website and add its URL to `"sameAs"`.
+4. **PageSpeed Insights** (https://pagespeed.web.dev): run it on the live URL
+   to confirm the host is not slowing things down.
+5. Update `<lastmod>` in `sitemap.xml` whenever you change the page.
+
+## 9. Optional extras
+
+- **Analytics**: paste the tracking snippet (Google Analytics 4, or a lighter
+  option such as Plausible) just before `</head>`. If it sets cookies, add a
+  privacy policy page and link it in the footer.
+- **After editing CSS or JavaScript**: the host caches those files for a month.
+  Change the `?v=20260929` at the end of the `styles.css` and `main.js` links in
+  `index.html` (and the `styles.css` link in `404.html`) to today's date so
+  returning visitors get the new version.
+- **Working hours**: they appear in the hero, contact panel, footer and the
+  structured data. Search for `9:00` and `9 am` and keep all of them in step.
+
+## 10. Checklist before going live
+
+- [ ] https://coolclimateac.in loads with a valid SSL certificate
+- [ ] Facebook and Instagram URLs in place, and added to `"sameAs"`
+- [ ] Working hours, service areas and services on the page are accurate
 - [ ] Tap every WhatsApp button on your phone once
-- [ ] `[WEBSITE URL]` replaced in three files
-- [ ] SSL active, HTTPS redirect enabled
-- [ ] Submit `sitemap.xml` in Google Search Console
+- [ ] Redirect lines enabled in `.htaccess`, and `http://` and `www.` both land on https://coolclimateac.in
+- [ ] Rich Results Test passes on the live URL
+- [ ] Site verified in Google Search Console and `sitemap.xml` submitted
+- [ ] Google Business Profile created and linked to the site
