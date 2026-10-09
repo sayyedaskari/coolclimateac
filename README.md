@@ -10,8 +10,8 @@ Everything reads from the `<body>` tag in `index.html`:
 
 ```html
 <body
-  data-whatsapp="918097570048"                 digits only, with country code
-  data-whatsapp-display="+91 80975 70048"      how the number is shown
+  data-whatsapp="917304304787"                 digits only, with country code
+  data-whatsapp-display="+91 73043 04787"      how the number is shown
   data-wa-chat="Hello Cool Climate, I would like to enquire about AC sales/service. Please share more details."
   data-wa-book="Hello Cool Climate, I would like to book an AC service.">
 ```
@@ -48,24 +48,24 @@ Before launch:
 
 ## 3. Facebook and Instagram links
 
-Four links (two in the contact panel, two in the footer) currently point to `#`.
-Clicking them does nothing until real URLs go in.
+Instagram is live: https://www.instagram.com/coolclimate.a.c is linked in the
+contact panel and the footer, and listed in `"sameAs"` in the structured data.
+
+Facebook still points to `#` in the same two places. Clicking it does nothing
+until a real URL goes in. When the page exists:
 
 1. In `index.html`, search for `data-social="facebook"` and replace `href="#"`
-   with your Facebook page URL in both places. Do the same for
-   `data-social="instagram"`.
-2. In the structured data block in `<head>`, add both URLs to the `"sameAs"`
-   list, for example:
+   with the Facebook page URL in both places.
+2. Add the same URL to the `"sameAs"` list in the structured data block in
+   `<head>`:
 
 ```json
 "sameAs": [
-  "https://wa.me/918097570048",
-  "https://www.facebook.com/yourpage",
-  "https://www.instagram.com/yourhandle"
+  "https://wa.me/917304304787",
+  "https://www.instagram.com/coolclimate.a.c",
+  "https://www.facebook.com/yourpage"
 ],
 ```
-
-That second step tells Google the profiles belong to this business.
 
 ## 4. Upload to shared hosting
 
@@ -192,7 +192,7 @@ After launch:
 ## 10. Checklist before going live
 
 - [ ] https://coolclimateac.in loads with a valid SSL certificate
-- [ ] Facebook and Instagram URLs in place, and added to `"sameAs"`
+- [ ] Facebook URL in place (two links) and added to `"sameAs"`
 - [ ] Working hours, service areas and services on the page are accurate
 - [ ] Tap every WhatsApp button on your phone once
 - [ ] Redirect lines enabled in `.htaccess`, and `http://` and `www.` both land on https://coolclimateac.in
